@@ -1,23 +1,36 @@
 using Assets.Scripts;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 
-[RequireComponent(typeof(SpriteRenderer),typeof(AudioSource))]
+[RequireComponent(typeof(SpriteRenderer),typeof(AudioSource),typeof(Animator))]
 public class Character : MonoBehaviour
 {
     [SerializeField] private Sprite DefaultSprite;
     [SerializeField] private Sprite GlowSprite;
+    [SerializeField] private RuntimeAnimatorController Template;
 
     private SpriteRenderer spriteRenderer;
     private AudioSource audioSource;
+    private Animator animator;
+    private AnimatorOverrideController overrideController;
+
     private bool isSkinned = false;
     private SkinImageObject obj;
 
+
+    private const string CLIP_NAME = "TestAnim";
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
+        animator = GetComponent<Animator>();
+
+        overrideController = new AnimatorOverrideController(Template);
+        animator.runtimeAnimatorController = overrideController;
+        
     }
 
 
@@ -46,10 +59,12 @@ public class Character : MonoBehaviour
         {
 
               isSkinned = true;
-              spriteRenderer.color = Color.red;
               obj = data;
-            obj.gameObject.SetActive(false);
-              Debug.Log("Set Skin");
+              obj.gameObject.SetActive(false);
+            
+            SetupAudioSource();
+            SetupAnimation();
+            
         }
     }
 
@@ -58,9 +73,33 @@ public class Character : MonoBehaviour
         if (isSkinned)
         {
             isSkinned =false;
-            spriteRenderer.color = Color.white;
             obj.gameObject.SetActive(true);
+
+            StopAnimAndAudio();
+
+            spriteRenderer.sprite = DefaultSprite;
         }
+    }
+
+    private void StopAnimAndAudio()
+    {
+        animator.SetTrigger("RemoveSkin");
+        audioSource.Stop();
+    }
+
+    private void SetupAudioSource()
+    {
+       // audioSource.clip = obj.SkinSO.AudioClip;
+        audioSource.loop = true;
+        audioSource.Play();
+    }
+
+    private void SetupAnimation()
+    {
+
+        overrideController[CLIP_NAME] = obj.SkinSO.AnimationClip;
+
+        animator.SetTrigger("AddSkin");
     }
 
 

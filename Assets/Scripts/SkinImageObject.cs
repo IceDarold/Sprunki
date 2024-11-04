@@ -8,7 +8,7 @@ namespace Assets.Scripts
     {
         [SerializeField] private SkinSO SkinSettings;
 
-        public SkinSO SkinSO { get; private set; }
+        public SkinSO SkinSO => SkinSettings;
 
         private Vector3 startPos;
 
