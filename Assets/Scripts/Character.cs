@@ -18,6 +18,7 @@ public class Character : MonoBehaviour
     private AnimatorOverrideController overrideController;
 
     private bool isSkinned = false;
+    private bool isMute = false;
     private SkinImageObject obj;
 
 
@@ -81,6 +82,26 @@ public class Character : MonoBehaviour
         }
     }
 
+    public void ChangeMuteState()
+    {
+        if(!isSkinned) return;
+
+        if (!isMute)
+        {
+            audioSource.Stop();
+            animator.SetTrigger("Mute");
+            spriteRenderer.sprite = obj.SkinSO.OffSkin;
+            isMute = true;
+        }
+        else
+        {
+            animator.SetTrigger("AddSkin");
+            audioSource.Play();
+            isMute = false;
+        }
+        
+    }
+
     private void StopAnimAndAudio()
     {
         animator.SetTrigger("RemoveSkin");
@@ -89,16 +110,14 @@ public class Character : MonoBehaviour
 
     private void SetupAudioSource()
     {
-       // audioSource.clip = obj.SkinSO.AudioClip;
+        audioSource.clip = obj.SkinSO.AudioClip;
         audioSource.loop = true;
         audioSource.Play();
     }
 
     private void SetupAnimation()
     {
-
         overrideController[CLIP_NAME] = obj.SkinSO.AnimationClip;
-
         animator.SetTrigger("AddSkin");
     }
 

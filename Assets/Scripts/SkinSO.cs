@@ -7,6 +7,7 @@ public class SkinSO : ScriptableObject
 {
     public AnimationClip AnimationClip;
     public AudioClip  AudioClip;
+    public Sprite OffSkin;
 }
     
 
