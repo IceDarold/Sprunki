@@ -10,6 +10,8 @@ public  class DragAndDropController : MonoBehaviour
     private SkinSO skinSO;
 
     private Vector3 mousePosition;
+    
+
 
     private void Awake()
     {
@@ -33,10 +35,15 @@ public  class DragAndDropController : MonoBehaviour
             mousePosition = Input.mousePosition;
         }
     }
-    public static void AddObject(SkinImageObject o,SkinSO so)
+    public static void AddObject(SkinImageObject o)
     {
         instance.obj = o;
-        instance.skinSO = so;
+        instance.skinSO = instance.obj.SkinSO;
         instance.mousePosition = Input.mousePosition;
+    }
+
+    public static SkinImageObject GetData()
+    {
+        return instance.obj;
     }
 }
