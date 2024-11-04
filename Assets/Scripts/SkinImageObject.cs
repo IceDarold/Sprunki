@@ -8,6 +8,8 @@ namespace Assets.Scripts
     {
         [SerializeField] private SkinSO SkinSettings;
 
+        public SkinSO SkinSO => SkinSettings;
+
         private Vector3 startPos;
 
         private void Awake()
@@ -24,7 +26,7 @@ namespace Assets.Scripts
 
         public void OnPointerDown(PointerEventData eventData)
         {
-            DragAndDropController.AddObject(this, SkinSettings);
+            DragAndDropController.AddObject(this);
         }
     }
 }
