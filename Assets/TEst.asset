@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a971932b5fd6194d967e154b66bcbca, type: 3}
   m_Name: TEst
   m_EditorClassIdentifier: 
-  AnimationClip: {fileID: 7400000, guid: 1e247315aa3f0a643b1bae675b52464a, type: 2}
+  AnimationClip: {fileID: 7400000, guid: a39aab025474c214f89a44999141fc81, type: 2}
   AudioClip: {fileID: 0}
   OffSkin: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
