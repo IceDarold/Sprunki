@@ -8,29 +8,23 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer),typeof(AudioSource),typeof(Animator))]
 public class Character : MonoBehaviour
 {
-    [SerializeField] private Sprite DefaultSprite;
-    [SerializeField] private Sprite GlowSprite;
+    
     [SerializeField] private RuntimeAnimatorController Template;
 
-    private SpriteRenderer spriteRenderer;
     private AudioSource audioSource;
-    private Animator animator;
-    private AnimatorOverrideController overrideController;
 
     private bool isSkinned = false;
     private bool isMute = false;
     private SkinImageObject obj;
 
+    private CharacterAppearance characterAppearance;
+
 
     private const string CLIP_NAME = "TestAnim";
     private void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        characterAppearance = GetComponent<CharacterAppearance>();
         audioSource = GetComponent<AudioSource>();
-        animator = GetComponent<Animator>();
-
-        overrideController = new AnimatorOverrideController(Template);
-        animator.runtimeAnimatorController = overrideController;
         
     }
 
@@ -39,7 +33,7 @@ public class Character : MonoBehaviour
     {
         if (!isSkinned && DragAndDropController.GetData() != null)
         {
-            spriteRenderer.sprite = GlowSprite;
+            characterAppearance.SetSprite(true);
         }
         
     }
@@ -48,7 +42,7 @@ public class Character : MonoBehaviour
     {
         if(!isSkinned && DragAndDropController.GetData() != null)
         {
-            spriteRenderer.sprite = DefaultSprite;
+            characterAppearance.SetSprite(false);
         }
         
     }
@@ -64,7 +58,7 @@ public class Character : MonoBehaviour
               obj.gameObject.SetActive(false);
             
             SetupAudioSource();
-            SetupAnimation();
+            characterAppearance.AddSkin(obj.SkinSO);
             
         }
     }
@@ -78,7 +72,7 @@ public class Character : MonoBehaviour
 
             StopAnimAndAudio();
 
-            spriteRenderer.sprite = DefaultSprite;
+            characterAppearance.RemoveSkin();
         }
     }
 
@@ -89,22 +83,22 @@ public class Character : MonoBehaviour
         if (!isMute)
         {
             audioSource.Stop();
-            animator.SetTrigger("Mute");
-            spriteRenderer.sprite = obj.SkinSO.OffSkin;
             isMute = true;
+            
         }
         else
         {
-            animator.SetTrigger("AddSkin");
+            
             audioSource.Play();
             isMute = false;
         }
-        
+
+        characterAppearance.Mute(isMute);
+
     }
 
     private void StopAnimAndAudio()
     {
-        animator.SetTrigger("RemoveSkin");
         audioSource.Stop();
     }
 
@@ -115,11 +109,6 @@ public class Character : MonoBehaviour
         audioSource.Play();
     }
 
-    private void SetupAnimation()
-    {
-        overrideController[CLIP_NAME] = obj.SkinSO.AnimationClip;
-        animator.SetTrigger("AddSkin");
-    }
 
 
 

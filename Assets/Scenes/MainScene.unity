@@ -507,6 +507,7 @@ GameObject:
   - component: {fileID: 310146605}
   - component: {fileID: 310146604}
   - component: {fileID: 310146609}
+  - component: {fileID: 310146610}
   m_Layer: 0
   m_Name: Character (1)
   m_TagString: Untagged
@@ -526,8 +527,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b845d3a4e9d934eacecff5e950da61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultSprite: {fileID: 21300000, guid: 1cf920c6f94cff64fad1f203d59e9645, type: 3}
-  GlowSprite: {fileID: 21300000, guid: e0c489613d5356b438a7b939c56edca2, type: 3}
   Template: {fileID: 9100000, guid: c7b7470e252d130438825bb2964b5301, type: 2}
 --- !u!95 &310146605
 Animator:
@@ -758,6 +757,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.51, y: 3.94}
   m_EdgeRadius: 0
+--- !u!114 &310146610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310146603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c50b7f2c25e9d4a4380c7f0a50c68689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultSprite: {fileID: 21300000, guid: 1cf920c6f94cff64fad1f203d59e9645, type: 3}
+  GlowSprite: {fileID: 21300000, guid: e0c489613d5356b438a7b939c56edca2, type: 3}
+  AnimationFrameTime: 1
+  SkinRemoveAnimationSpeed: 10
 --- !u!1 &364855728
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,6 +1232,7 @@ GameObject:
   - component: {fileID: 457771878}
   - component: {fileID: 457771877}
   - component: {fileID: 457771882}
+  - component: {fileID: 457771883}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -1236,8 +1252,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b845d3a4e9d934eacecff5e950da61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultSprite: {fileID: 21300000, guid: 1cf920c6f94cff64fad1f203d59e9645, type: 3}
-  GlowSprite: {fileID: 21300000, guid: e0c489613d5356b438a7b939c56edca2, type: 3}
   Template: {fileID: 9100000, guid: c7b7470e252d130438825bb2964b5301, type: 2}
 --- !u!95 &457771878
 Animator:
@@ -1468,6 +1482,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.51, y: 3.94}
   m_EdgeRadius: 0
+--- !u!114 &457771883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457771876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c50b7f2c25e9d4a4380c7f0a50c68689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultSprite: {fileID: 21300000, guid: 1cf920c6f94cff64fad1f203d59e9645, type: 3}
+  GlowSprite: {fileID: 21300000, guid: e0c489613d5356b438a7b939c56edca2, type: 3}
+  AnimationFrameTime: 1
+  SkinRemoveAnimationSpeed: 10
 --- !u!1 &615910693
 GameObject:
   m_ObjectHideFlags: 0
@@ -1865,6 +1895,7 @@ GameObject:
   - component: {fileID: 1004952389}
   - component: {fileID: 1004952388}
   - component: {fileID: 1004952393}
+  - component: {fileID: 1004952394}
   m_Layer: 0
   m_Name: Character (4)
   m_TagString: Untagged
@@ -1884,8 +1915,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b845d3a4e9d934eacecff5e950da61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultSprite: {fileID: 21300000, guid: 1cf920c6f94cff64fad1f203d59e9645, type: 3}
-  GlowSprite: {fileID: 21300000, guid: e0c489613d5356b438a7b939c56edca2, type: 3}
   Template: {fileID: 9100000, guid: c7b7470e252d130438825bb2964b5301, type: 2}
 --- !u!95 &1004952389
 Animator:
@@ -2116,6 +2145,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.51, y: 3.94}
   m_EdgeRadius: 0
+--- !u!114 &1004952394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004952387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c50b7f2c25e9d4a4380c7f0a50c68689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultSprite: {fileID: 21300000, guid: 1cf920c6f94cff64fad1f203d59e9645, type: 3}
+  GlowSprite: {fileID: 21300000, guid: e0c489613d5356b438a7b939c56edca2, type: 3}
+  AnimationFrameTime: 1
+  SkinRemoveAnimationSpeed: 10
 --- !u!1 &1070913967
 GameObject:
   m_ObjectHideFlags: 0
@@ -2291,6 +2336,7 @@ GameObject:
   - component: {fileID: 1227497378}
   - component: {fileID: 1227497377}
   - component: {fileID: 1227497382}
+  - component: {fileID: 1227497383}
   m_Layer: 0
   m_Name: Character (3)
   m_TagString: Untagged
@@ -2310,8 +2356,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b845d3a4e9d934eacecff5e950da61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultSprite: {fileID: 21300000, guid: 1cf920c6f94cff64fad1f203d59e9645, type: 3}
-  GlowSprite: {fileID: 21300000, guid: e0c489613d5356b438a7b939c56edca2, type: 3}
   Template: {fileID: 9100000, guid: c7b7470e252d130438825bb2964b5301, type: 2}
 --- !u!95 &1227497378
 Animator:
@@ -2542,6 +2586,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.51, y: 3.94}
   m_EdgeRadius: 0
+--- !u!114 &1227497383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227497376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c50b7f2c25e9d4a4380c7f0a50c68689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultSprite: {fileID: 21300000, guid: 1cf920c6f94cff64fad1f203d59e9645, type: 3}
+  GlowSprite: {fileID: 21300000, guid: e0c489613d5356b438a7b939c56edca2, type: 3}
+  AnimationFrameTime: 1
+  SkinRemoveAnimationSpeed: 10
 --- !u!1 &1517650282
 GameObject:
   m_ObjectHideFlags: 0
@@ -2912,6 +2972,7 @@ GameObject:
   - component: {fileID: 1649660352}
   - component: {fileID: 1649660351}
   - component: {fileID: 1649660356}
+  - component: {fileID: 1649660357}
   m_Layer: 0
   m_Name: Character (5)
   m_TagString: Untagged
@@ -2931,8 +2992,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b845d3a4e9d934eacecff5e950da61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultSprite: {fileID: 21300000, guid: 1cf920c6f94cff64fad1f203d59e9645, type: 3}
-  GlowSprite: {fileID: 21300000, guid: e0c489613d5356b438a7b939c56edca2, type: 3}
   Template: {fileID: 9100000, guid: c7b7470e252d130438825bb2964b5301, type: 2}
 --- !u!95 &1649660352
 Animator:
@@ -3163,6 +3222,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.51, y: 3.94}
   m_EdgeRadius: 0
+--- !u!114 &1649660357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649660350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c50b7f2c25e9d4a4380c7f0a50c68689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultSprite: {fileID: 21300000, guid: 1cf920c6f94cff64fad1f203d59e9645, type: 3}
+  GlowSprite: {fileID: 21300000, guid: e0c489613d5356b438a7b939c56edca2, type: 3}
+  AnimationFrameTime: 1
+  SkinRemoveAnimationSpeed: 10
 --- !u!1 &1664613564
 GameObject:
   m_ObjectHideFlags: 0
@@ -3444,6 +3519,7 @@ GameObject:
   - component: {fileID: 1860076657}
   - component: {fileID: 1860076656}
   - component: {fileID: 1860076661}
+  - component: {fileID: 1860076662}
   m_Layer: 0
   m_Name: Character (2)
   m_TagString: Untagged
@@ -3463,8 +3539,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b845d3a4e9d934eacecff5e950da61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultSprite: {fileID: 21300000, guid: 1cf920c6f94cff64fad1f203d59e9645, type: 3}
-  GlowSprite: {fileID: 21300000, guid: e0c489613d5356b438a7b939c56edca2, type: 3}
   Template: {fileID: 9100000, guid: c7b7470e252d130438825bb2964b5301, type: 2}
 --- !u!95 &1860076657
 Animator:
@@ -3695,6 +3769,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.51, y: 3.94}
   m_EdgeRadius: 0
+--- !u!114 &1860076662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860076655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c50b7f2c25e9d4a4380c7f0a50c68689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultSprite: {fileID: 21300000, guid: 1cf920c6f94cff64fad1f203d59e9645, type: 3}
+  GlowSprite: {fileID: 21300000, guid: e0c489613d5356b438a7b939c56edca2, type: 3}
+  AnimationFrameTime: 1
+  SkinRemoveAnimationSpeed: 10
 --- !u!1 &2009707924
 GameObject:
   m_ObjectHideFlags: 0
