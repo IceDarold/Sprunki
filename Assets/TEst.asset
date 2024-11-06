@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Animation:
   - {fileID: 1369907901, guid: 6924e5c2989e0854695ab2b96a9e7574, type: 3}
-  AudioClip: {fileID: 0}
+  AudioClip: {fileID: 8300000, guid: 372b2cdd2c44bdd4e913b4f3dd50faac, type: 3}
   OffSkin: {fileID: -1901318112, guid: 6924e5c2989e0854695ab2b96a9e7574, type: 3}

@@ -68,6 +68,8 @@ public class Character : MonoBehaviour
         if (isSkinned)
         {
             isSkinned =false;
+  
+
             obj.gameObject.SetActive(true);
 
             StopAnimAndAudio();
@@ -94,18 +96,22 @@ public class Character : MonoBehaviour
         }
 
         characterAppearance.Mute(isMute);
+        MusicSyncController.MuteState(isMute);
 
     }
 
     private void StopAnimAndAudio()
     {
+        MusicSyncController.Remove(isMute);
         audioSource.Stop();
+        isMute = false;
     }
 
     private void SetupAudioSource()
     {
         audioSource.clip = obj.SkinSO.AudioClip;
-        audioSource.loop = true;
+        MusicSyncController.Add(obj.SkinSO.AudioClip.length);
+        audioSource.time = MusicSyncController.Time;
         audioSource.Play();
     }
 
