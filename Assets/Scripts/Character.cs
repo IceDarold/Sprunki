@@ -21,11 +21,18 @@ public class Character : MonoBehaviour
 
 
     private const string CLIP_NAME = "TestAnim";
+
     private void Awake()
     {
         characterAppearance = GetComponent<CharacterAppearance>();
         audioSource = GetComponent<AudioSource>();
         
+        ModeController.OnModeChanged += OnModeChanged;
+    }
+
+    private void OnDestroy()
+    {
+        ModeController.OnModeChanged -= OnModeChanged;
     }
 
 
@@ -57,6 +64,13 @@ public class Character : MonoBehaviour
               obj = data;
               obj.gameObject.SetActive(false);
             
+            if(obj.SkinSO.ChangeToMode != ModeType.None && obj.SkinSO.ChangeToMode != ModeController.Mode)
+            {
+                ModeController.SetMode(obj.SkinSO.ChangeToMode);
+                return;
+            }
+            
+
             SetupAudioSource();
             characterAppearance.AddSkin(obj.SkinSO);
             
@@ -109,10 +123,33 @@ public class Character : MonoBehaviour
 
     private void SetupAudioSource()
     {
-        audioSource.clip = obj.SkinSO.AudioClip;
-        MusicSyncController.Add(obj.SkinSO.AudioClip.length);
-        audioSource.time = MusicSyncController.Time;
+        AudioClip clip = obj.SkinSO.GetData().AudioClip;
+        audioSource.clip = clip;
+
+        if (MusicSyncController.UseSync)
+        {
+            MusicSyncController.Add(clip.length);
+            audioSource.time = MusicSyncController.Time;
+        }
+        
         audioSource.Play();
+    }
+
+    private void OnModeChanged()
+    {
+        if (isSkinned)
+        {
+            isSkinned = false;
+
+
+            obj.gameObject.SetActive(true);
+
+            StopAnimAndAudio();
+
+            characterAppearance.RemoveSkin();
+        }
+
+
     }
 
 

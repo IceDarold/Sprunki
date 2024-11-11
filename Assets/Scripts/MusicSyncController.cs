@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class MusicSyncController : MonoBehaviour
 {
-
+    [SerializeField] private bool useSync = true;
     public static float Time {  get; private set; }
+
+    public static bool UseSync => instance.useSync;
 
     private static MusicSyncController instance;
     

@@ -29,8 +29,8 @@ public class CharacterAppearance : MonoBehaviour
             if(currentTime >= AnimationFrameTime)
             {
                 currentTime = 0f;
-                currentFrame = (currentFrame + 1) % skinData.Animation.Count;
-                spriteRenderer.sprite = skinData.Animation[currentFrame];
+                currentFrame = (currentFrame + 1) % skinData.GetData().Animation.Count;
+                spriteRenderer.sprite = skinData.GetData().Animation[currentFrame];
             }
         }
 
@@ -50,7 +50,7 @@ public class CharacterAppearance : MonoBehaviour
 
     public void AddSkin(SkinSO skin)
     {
-        if(skin == null || skin.Animation.Count == 0)
+        if(skin == null || skin.GetData().Animation.Count == 0)
         {
             Debug.LogError("Add at least one sprite for animation");
             return;
@@ -60,7 +60,7 @@ public class CharacterAppearance : MonoBehaviour
         currentFrame = 0;
         currentTime = 0f;
 
-        spriteRenderer.sprite = skinData.Animation[currentFrame];
+        spriteRenderer.sprite = skinData.GetData().Animation[currentFrame];
 
     }
 
@@ -77,14 +77,14 @@ public class CharacterAppearance : MonoBehaviour
     {
         if(isMute)
         {
-            spriteRenderer.sprite = skinData.OffSkin;
+            spriteRenderer.sprite = skinData.GetData().OffSkin;
             currentFrame = -1;
             currentTime = 0f;
         }
         else
         {
             currentFrame = 0;
-            spriteRenderer.sprite = skinData.Animation[currentFrame];
+            spriteRenderer.sprite = skinData.GetData().Animation[currentFrame];
         }
     }
 
