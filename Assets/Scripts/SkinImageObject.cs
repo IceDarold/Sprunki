@@ -12,10 +12,7 @@ namespace Assets.Scripts
 
         private Vector3 startPos;
 
-        private void Awake()
-        {
-            startPos = transform.position;
-        }
+
 
         public void Return()
         {
@@ -26,6 +23,7 @@ namespace Assets.Scripts
 
         public void OnPointerDown(PointerEventData eventData)
         {
+            startPos = transform.position;
             DragAndDropController.AddObject(this);
         }
     }
