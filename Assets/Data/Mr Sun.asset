@@ -62,4 +62,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 3b2cc505da9c82e4881bea4b58287f4a, type: 3}
     AudioClip: {fileID: 8300000, guid: 7090101a95b437946a783c2973e84c0c, type: 3}
     OffSkin: {fileID: 21300000, guid: 44b01bf409ef20947ad832aa14197004, type: 3}
+  AnimFrameTime: 0.08333334
+  PauseType: 0
+  PauseDuration: 0
   ChangeToMode: 0

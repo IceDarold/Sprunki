@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class SizeController : MonoBehaviour
 {
+    [SerializeField] private Vector2 referenceSize;
+    [SerializeField] private float referenceFOV;
+
     private Camera _cam;
     private int currentScreenWidth;
     private int currentScreenHeight;
 
     // Укажите здесь базовое разрешение и соответствующее поле зрения
     private float baseResolutionAspectRatio;
-    private float baseFOV = 60f;
+    
     public float maxFOV = 80f;
     public float minFOV = 53f;
     void Start()
@@ -18,9 +21,8 @@ public class SizeController : MonoBehaviour
         _cam = GetComponent<Camera>();
         currentScreenWidth = Screen.width;
         currentScreenHeight = Screen.height;
-        baseResolutionAspectRatio = (float)currentScreenWidth / currentScreenHeight;
+        baseResolutionAspectRatio = (float)referenceSize.x / referenceSize.y;
 
-        baseFOV = _cam.fieldOfView;
         Debug.Log(currentScreenHeight.ToString() + " " + currentScreenWidth.ToString());
         UpdateFOV();
     }
@@ -45,7 +47,7 @@ public class SizeController : MonoBehaviour
         float currentAspectRatio = (float)Screen.width / Screen.height;
         Debug.Log(currentAspectRatio.ToString() + " " + baseResolutionAspectRatio.ToString());
         // Корректируем поле зрения пропорционально изменению соотношения сторон
-        float newFov = baseFOV * (baseResolutionAspectRatio / currentAspectRatio);
+        float newFov = referenceFOV * (baseResolutionAspectRatio / currentAspectRatio);
         _cam.fieldOfView = Mathf.Clamp(newFov, minFOV, maxFOV);
     }
 }

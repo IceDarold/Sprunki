@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
 
-[RequireComponent(typeof(SpriteRenderer),typeof(AudioSource),typeof(Animator))]
+[RequireComponent(typeof(SpriteRenderer),typeof(AudioSource),typeof(UpdatedSpriteRenderer))]
 public class Character : MonoBehaviour
 {
     

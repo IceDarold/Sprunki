@@ -8,6 +8,9 @@ using UnityEngine;
 public class SkinSO : ScriptableObject
 {
     [SerializeField] private List<Data> ModesSettings;
+    [Min(0)] public float AnimFrameTime;
+    public PauseType PauseType;
+    public float PauseDuration;
     public ModeType ChangeToMode;
 
     public Data GetData()
@@ -23,6 +26,14 @@ public class Data
     public List<Sprite> Animation;
     public AudioClip AudioClip;
     public Sprite OffSkin;
+}
+
+
+
+public enum PauseType
+{
+    AfterAnimation,
+    BeforeAnimation
 }
     
 

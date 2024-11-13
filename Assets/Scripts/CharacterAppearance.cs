@@ -6,7 +6,6 @@ public class CharacterAppearance : MonoBehaviour
 {
     [SerializeField] private Sprite DefaultSprite;
     [SerializeField] private Sprite GlowSprite;
-    [SerializeField] private float AnimationFrameTime;
     [SerializeField] private float SkinRemoveAnimationSpeed;
 
     private SpriteRenderer spriteRenderer;
@@ -15,7 +14,7 @@ public class CharacterAppearance : MonoBehaviour
     private int currentFrame = -1;
     private float currentTime;
 
-
+    private Coroutine MainAnim;
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -23,16 +22,16 @@ public class CharacterAppearance : MonoBehaviour
 
     private void Update()
     {
-        if(currentFrame != -1)
+        /*if(currentFrame != -1)
         {
             currentTime += Time.deltaTime;
-            if(currentTime >= AnimationFrameTime)
+            if(currentTime >= skinData.AnimFrameTime)
             {
                 currentTime = 0f;
                 currentFrame = (currentFrame + 1) % skinData.GetData().Animation.Count;
                 spriteRenderer.sprite = skinData.GetData().Animation[currentFrame];
             }
-        }
+        }*/
 
     }
 
@@ -62,6 +61,7 @@ public class CharacterAppearance : MonoBehaviour
 
         spriteRenderer.sprite = skinData.GetData().Animation[currentFrame];
 
+        MainAnim =  StartCoroutine(MainAnimation());
     }
 
     public void RemoveSkin()
@@ -69,7 +69,8 @@ public class CharacterAppearance : MonoBehaviour
         
         currentFrame = -1;
         currentTime = 0f;
-
+        Debug.Log("Remove Skin");
+        StopCoroutine(MainAnim);
         StartCoroutine(RemoveSkinAnimation());
     }
 
@@ -77,7 +78,9 @@ public class CharacterAppearance : MonoBehaviour
     {
         if(isMute)
         {
+            StopCoroutine(MainAnim);
             spriteRenderer.sprite = skinData.GetData().OffSkin;
+
             currentFrame = -1;
             currentTime = 0f;
         }
@@ -85,7 +88,34 @@ public class CharacterAppearance : MonoBehaviour
         {
             currentFrame = 0;
             spriteRenderer.sprite = skinData.GetData().Animation[currentFrame];
+            MainAnim = StartCoroutine(MainAnimation());
         }
+    }
+
+
+    private IEnumerator MainAnimation()
+    {
+        while (true)
+        {
+            if (skinData.PauseType == PauseType.BeforeAnimation)
+            {
+                yield return new WaitForSeconds(skinData.PauseDuration);
+            }
+
+            foreach (var item in skinData.GetData().Animation)
+            {
+                spriteRenderer.sprite = item;
+                yield return new WaitForSeconds(skinData.AnimFrameTime);
+
+            }
+
+            spriteRenderer.sprite = skinData.GetData().Animation[0];
+            if (skinData.PauseType == PauseType.AfterAnimation)
+            {
+                yield return new WaitForSeconds(skinData.PauseDuration);
+            }
+        }
+        
     }
 
     private IEnumerator RemoveSkinAnimation()
