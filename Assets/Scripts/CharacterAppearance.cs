@@ -70,7 +70,12 @@ public class CharacterAppearance : MonoBehaviour
         currentFrame = -1;
         currentTime = 0f;
         Debug.Log("Remove Skin");
-        StopCoroutine(MainAnim);
+        if(MainAnim != null)
+        {
+            StopCoroutine(MainAnim);
+            MainAnim = null;
+        }
+        
         StartCoroutine(RemoveSkinAnimation());
     }
 

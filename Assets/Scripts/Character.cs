@@ -19,6 +19,8 @@ public class Character : MonoBehaviour
 
     private CharacterAppearance characterAppearance;
 
+    private float cachedTime = 0f;
+
 
     private const string CLIP_NAME = "TestAnim";
 
@@ -98,12 +100,21 @@ public class Character : MonoBehaviour
 
         if (!isMute)
         {
+            if(MusicSyncController.UseSelfSync)
+            {
+                cachedTime = audioSource.time;
+            }
+            
             audioSource.Stop();
             isMute = true;
             
         }
         else
         {
+            if (MusicSyncController.UseSelfSync)
+            {
+                audioSource.time = cachedTime;
+            }
             
             audioSource.Play();
             isMute = false;
@@ -124,6 +135,11 @@ public class Character : MonoBehaviour
     private void SetupAudioSource()
     {
         AudioClip clip = obj.SkinSO.GetData().AudioClip;
+
+        if(clip == null)
+        {
+            return;
+        }
         audioSource.clip = clip;
 
         if (MusicSyncController.UseSync)

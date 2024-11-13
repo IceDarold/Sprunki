@@ -12,4 +12,91 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a971932b5fd6194d967e154b66bcbca, type: 3}
   m_Name: Pink
   m_EditorClassIdentifier: 
-  ModesSettings: []
+  ModesSettings:
+  - Mode: 1
+    Animation:
+    - {fileID: 21300000, guid: 94a1295822c889d479c64f14267914b3, type: 3}
+    - {fileID: 21300000, guid: d49e4c3e801077e4d8430db2c32e5d5d, type: 3}
+    - {fileID: 21300000, guid: 79e2f5d3e078fe34db898f7b8f7a7000, type: 3}
+    - {fileID: 21300000, guid: b5a1c123da6e60e47afcda5ff067c9d0, type: 3}
+    - {fileID: 21300000, guid: cd21df787eae04944bbb76de64e4c2a3, type: 3}
+    - {fileID: 21300000, guid: 4dc92413487f8844aa664158ed3f8360, type: 3}
+    - {fileID: 21300000, guid: 12c972f5b28291d48a3f8a5eb00f694e, type: 3}
+    - {fileID: 21300000, guid: 32321e12bcc546b41ab12b0523696859, type: 3}
+    - {fileID: 21300000, guid: 91560ed13a2cd4c4d8e3ce1fa2c8aa18, type: 3}
+    - {fileID: 21300000, guid: 92e918d104b82b245b40defcf2310526, type: 3}
+    - {fileID: 21300000, guid: 9db408f6333eb14469d569ac4e8894c0, type: 3}
+    - {fileID: 21300000, guid: a08407abd4ed9b2439e62ed8bc047f96, type: 3}
+    - {fileID: 21300000, guid: 617acbe7e5e7c0540a80211f87afde8c, type: 3}
+    - {fileID: 21300000, guid: cd8a693d23a493b479505469a55fbe2d, type: 3}
+    - {fileID: 21300000, guid: b003906973f83f34da04c32ff9c8402f, type: 3}
+    - {fileID: 21300000, guid: e763c81012600aa429c3843e24d2c998, type: 3}
+    AudioClip: {fileID: 8300000, guid: e04fa90dfd34c6248b5bd176fa41d848, type: 3}
+    OffSkin: {fileID: 21300000, guid: 2e2989acc0cfc7346995acb41487c745, type: 3}
+  - Mode: 2
+    Animation:
+    - {fileID: 21300000, guid: 010a4d1b61f039048b03e71260c8c5ac, type: 3}
+    - {fileID: 21300000, guid: 5e765ad175ce30047b8c5e6a2b608bf2, type: 3}
+    - {fileID: 21300000, guid: c710fc81c43929f47b2b691c6c9a5fa1, type: 3}
+    - {fileID: 21300000, guid: ad12ce7cd8ee7e649b6190dafbdd7ec0, type: 3}
+    - {fileID: 21300000, guid: 996a0a9d3bc81eb4c8ddf79caa6e3010, type: 3}
+    - {fileID: 21300000, guid: 574164fa66d46be4eaa36d1c45024b82, type: 3}
+    - {fileID: 21300000, guid: c7cfe9cf2c3ea9646b5b633d912e4a0e, type: 3}
+    - {fileID: 21300000, guid: 5ac895734040c8e418b0c3e93b557bda, type: 3}
+    - {fileID: 21300000, guid: e0bfec11b0541374199f407cb1832304, type: 3}
+    - {fileID: 21300000, guid: 3122c2c0d0ff6834fb18f1115268ddfb, type: 3}
+    - {fileID: 21300000, guid: b765c83775593534dbab5a27e6a8d25b, type: 3}
+    - {fileID: 21300000, guid: 9e846ffad11e4534c890a4c77a6ac96e, type: 3}
+    - {fileID: 21300000, guid: 74e9057164c93e84daf38f731eeb029d, type: 3}
+    - {fileID: 21300000, guid: a72895b11d83f8747bf677d910818efc, type: 3}
+    - {fileID: 21300000, guid: 2bdadba8b4150bf4d862f49457db82ce, type: 3}
+    - {fileID: 21300000, guid: 427552bc71068ad41acf625ebbc6facc, type: 3}
+    - {fileID: 21300000, guid: 5a98d018093ef714982c54464fa1f77b, type: 3}
+    - {fileID: 21300000, guid: 1313389d4ea45034eaddce6beddbded1, type: 3}
+    - {fileID: 21300000, guid: 979dec60af2ff0f40b6cfb321fd19900, type: 3}
+    - {fileID: 21300000, guid: 9ba3e87fa987ae74b9c00a627a0d70b9, type: 3}
+    - {fileID: 21300000, guid: d1790c28acd58f14cbb2a90ad44660e2, type: 3}
+    - {fileID: 21300000, guid: b2abb0e56b60ce343a6eaa7301062044, type: 3}
+    - {fileID: 21300000, guid: 8087dcc086eda514f9e968675d7e21b2, type: 3}
+    - {fileID: 21300000, guid: 999dd57fb9bb6434f8104b8054914cad, type: 3}
+    - {fileID: 21300000, guid: f42a846a3e5bb8b4492ce1d50c9d2d7a, type: 3}
+    - {fileID: 21300000, guid: 45126f36511ce3147a0515419e5a2be3, type: 3}
+    - {fileID: 21300000, guid: 423db71979370f44e855e5be3a100800, type: 3}
+    - {fileID: 21300000, guid: 96c702d6e4ceade458c69d36df4964d4, type: 3}
+    - {fileID: 21300000, guid: 723ed9c2cecbf91449fa1187f53832cd, type: 3}
+    - {fileID: 21300000, guid: c6cbee6414078c945bef5edc3db9a64e, type: 3}
+    - {fileID: 21300000, guid: 6f50ec992235be3428d16744b42f565d, type: 3}
+    - {fileID: 21300000, guid: dd85620587fe98340a4314aa837d7ab3, type: 3}
+    - {fileID: 21300000, guid: 53439c9baded1a7488ab34b14d123fd0, type: 3}
+    - {fileID: 21300000, guid: 43d48cbc6d3d92f468be6c3308dd78d0, type: 3}
+    - {fileID: 21300000, guid: 9dfa01fb41e09c948be64a280e55e547, type: 3}
+    - {fileID: 21300000, guid: 123279ee6910ec845b04b628dfd0ff21, type: 3}
+    - {fileID: 21300000, guid: a4011fef133c40845a167a0014c4749b, type: 3}
+    - {fileID: 21300000, guid: 23c96ff9e55da324bbd1027bb8dad1d4, type: 3}
+    - {fileID: 21300000, guid: c2248962465155140a566b91579a4ac8, type: 3}
+    - {fileID: 21300000, guid: 9873f595f4262cc4d946d94b6f946358, type: 3}
+    - {fileID: 21300000, guid: 142826fd480ff1541a08404014854cd6, type: 3}
+    - {fileID: 21300000, guid: 8c5350b843d9cad4eabe64797f12edd8, type: 3}
+    - {fileID: 21300000, guid: 89898816318af6e468af3ab707499e4f, type: 3}
+    - {fileID: 21300000, guid: 513d9dd3f46aec9499e06b047b6bb20d, type: 3}
+    - {fileID: 21300000, guid: 0a2be0e6f2c5a6942a38479585155dd8, type: 3}
+    - {fileID: 21300000, guid: f1cc93e30b89e1a4d9d286be6dce0832, type: 3}
+    - {fileID: 21300000, guid: 251d01d4ac2e2c94694267d8a10f7077, type: 3}
+    - {fileID: 21300000, guid: b1bf9332fdb5fa54db5e63c27229aee9, type: 3}
+    - {fileID: 21300000, guid: 069dc4e273ef81442aff2f923d0e86fe, type: 3}
+    - {fileID: 21300000, guid: 0c2f261578d391c4da39aadb7f797991, type: 3}
+    - {fileID: 21300000, guid: c5752ab37757dca4ebb5cc2c50bda960, type: 3}
+    - {fileID: 21300000, guid: f6a4508b0d1697e409ecdce9b42cfa53, type: 3}
+    - {fileID: 21300000, guid: 63dd99eafdb536440b8bec613ca74f68, type: 3}
+    - {fileID: 21300000, guid: fe5ab11439f4b25468c084ce156e43ca, type: 3}
+    - {fileID: 21300000, guid: 81d74c3c1cfe04e48aa4fd3b2003517a, type: 3}
+    - {fileID: 21300000, guid: d2b3a68ebf2495f4b90d8a7cc6c5ae3b, type: 3}
+    - {fileID: 21300000, guid: 15066fa083b5700479ff9e8bc4e0b54e, type: 3}
+    - {fileID: 21300000, guid: e6ab34313f6e00247ae8edea551ee81f, type: 3}
+    - {fileID: 21300000, guid: 72e70342351fb2f438caca203195fa72, type: 3}
+    AudioClip: {fileID: 8300000, guid: e04fa90dfd34c6248b5bd176fa41d848, type: 3}
+    OffSkin: {fileID: 21300000, guid: 4b1c61b56d9a0a14a8aff5474e4c146d, type: 3}
+  AnimFrameTime: 0.08333334
+  PauseType: 0
+  PauseDuration: 0
+  ChangeToMode: 0

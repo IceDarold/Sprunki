@@ -12,4 +12,89 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a971932b5fd6194d967e154b66bcbca, type: 3}
   m_Name: Red(Raddy)
   m_EditorClassIdentifier: 
-  ModesSettings: []
+  ModesSettings:
+  - Mode: 1
+    Animation:
+    - {fileID: 21300000, guid: 7c2396bea94c4564b8c290e8e88656fb, type: 3}
+    - {fileID: 21300000, guid: 581ba8b3d710460499274a471411c030, type: 3}
+    - {fileID: 21300000, guid: 7fdbc88d23bb8d347997625373dac914, type: 3}
+    - {fileID: 21300000, guid: 926d7cde500644a42b4d97e5176e904f, type: 3}
+    - {fileID: 21300000, guid: 6e86879123a16ea4389cd6633248ebe6, type: 3}
+    - {fileID: 21300000, guid: 2eb7200cb35e0714e8ff52bd51f8f244, type: 3}
+    - {fileID: 21300000, guid: cd0bc7005f042c4498f804daf30599f6, type: 3}
+    - {fileID: 21300000, guid: af5bc0c7c842c8548805015a652ecb91, type: 3}
+    - {fileID: 21300000, guid: ed4bce968829f804788a17e603a9d000, type: 3}
+    - {fileID: 21300000, guid: 7d7b26f4642fb3b43bde39bc4ca7335e, type: 3}
+    - {fileID: 21300000, guid: 1ec8d43c15e1a1d4c8e5e1e5ff227a04, type: 3}
+    - {fileID: 21300000, guid: e06f66bd4d649684b8123f2d741d4005, type: 3}
+    - {fileID: 21300000, guid: 87e85842b264c08409dbd98dc99e634e, type: 3}
+    - {fileID: 21300000, guid: 5a7ea88361c575e42ae2f57d535efca9, type: 3}
+    - {fileID: 21300000, guid: 15aaaec3f1e25024d8d8ae0c96f995a2, type: 3}
+    - {fileID: 21300000, guid: 71d2e0e2e6e76a745af28c9acf65e37c, type: 3}
+    - {fileID: 21300000, guid: b62acf5a57251b74d81089aa3d66cad8, type: 3}
+    - {fileID: 21300000, guid: 0d5b8cb276f062c41993ec549b0c778c, type: 3}
+    - {fileID: 21300000, guid: 49ee7599188499f48b774ee99c2a0d49, type: 3}
+    - {fileID: 21300000, guid: 69e22b7661f78104dab40e685f5f7c75, type: 3}
+    - {fileID: 21300000, guid: 8e65e538e2d9ae9419e3e3a23f581cf7, type: 3}
+    - {fileID: 21300000, guid: 197f7138da76fe54dbed1aa11ecc6969, type: 3}
+    - {fileID: 21300000, guid: f8f9680369167874ab7dabe654ce4f3e, type: 3}
+    - {fileID: 21300000, guid: c10f7cf760da9d440a60bc7242145376, type: 3}
+    AudioClip: {fileID: 8300000, guid: 85d2880b6b3aea54383231d1ea74abfa, type: 3}
+    OffSkin: {fileID: 21300000, guid: 3031481a04538914aa5d8ed51ed5fdbc, type: 3}
+  - Mode: 2
+    Animation:
+    - {fileID: 21300000, guid: 289b7a6f525dd5048aac5a90c3a8db79, type: 3}
+    - {fileID: 21300000, guid: a2c1631faddfdf74d90f9777f16ba015, type: 3}
+    - {fileID: 21300000, guid: 67ec2d164373b054d86375e57a68f354, type: 3}
+    - {fileID: 21300000, guid: 9b23eef193013044daa31c841911cad5, type: 3}
+    - {fileID: 21300000, guid: c91c914ad901fc2469fe9acf1e0c5089, type: 3}
+    - {fileID: 21300000, guid: a4094c3fd62d03641b32bf2049e0f1aa, type: 3}
+    - {fileID: 21300000, guid: b0d966e05e60e3d499ebbba36a825635, type: 3}
+    - {fileID: 21300000, guid: 1069d37e74cd4464aacc9e46bf31e7e3, type: 3}
+    - {fileID: 21300000, guid: 217dc187396a91b47b11038d84fb8070, type: 3}
+    - {fileID: 21300000, guid: 0f85a4501595ba044b55f688bfe37a5a, type: 3}
+    - {fileID: 21300000, guid: 9cf43db711f936947bfea0396301e7fb, type: 3}
+    - {fileID: 21300000, guid: d8922efb716cb624cbdac34e65b5b84f, type: 3}
+    - {fileID: 21300000, guid: 146ae19670e683540898459f64de8f98, type: 3}
+    - {fileID: 21300000, guid: facd0d429adefd14bbeea180397d08d3, type: 3}
+    - {fileID: 21300000, guid: 513132789c4d00e4b8dcb54e945141b6, type: 3}
+    - {fileID: 21300000, guid: 9971d527c2615c246b7267a8bd861dfb, type: 3}
+    - {fileID: 21300000, guid: a8ff625a010c9694a8d6dc6338ac2fcd, type: 3}
+    - {fileID: 21300000, guid: c02fc7a39d8a23640a783b8db1f2da67, type: 3}
+    - {fileID: 21300000, guid: 56ec3319e51e7a64989c4a9b3df76a31, type: 3}
+    - {fileID: 21300000, guid: cacabb634a66be1408f8db4c5e8f4900, type: 3}
+    - {fileID: 21300000, guid: cea30db29ecab344f8e1cb1d64805cfe, type: 3}
+    - {fileID: 21300000, guid: 0b7db4e0b9c9c914ab56fcda54d8a7d3, type: 3}
+    - {fileID: 21300000, guid: 6c927bc837c3e5c41b6494e7cc54b7a1, type: 3}
+    - {fileID: 21300000, guid: c134618b8b09be04d9c88386e20d56d6, type: 3}
+    - {fileID: 21300000, guid: 812d3dec678b5f54b90d9879ef824ceb, type: 3}
+    - {fileID: 21300000, guid: f896a0299d377cb4babfc1136cf5c7a9, type: 3}
+    - {fileID: 21300000, guid: 2ddea5d44145b644abfa82c72fdacdb2, type: 3}
+    - {fileID: 21300000, guid: 158f1b826af47a0468686a25ecb04d47, type: 3}
+    - {fileID: 21300000, guid: 50fc6c64b3cf43849aa2849fdad50c68, type: 3}
+    - {fileID: 21300000, guid: 23b64925f2462f3429be52a34998c3e1, type: 3}
+    - {fileID: 21300000, guid: c8271aa627c142f4484bd097b843a1bf, type: 3}
+    - {fileID: 21300000, guid: 542a27db87e6bbf47b59ad321eff0317, type: 3}
+    - {fileID: 21300000, guid: c0a2b531c9eb14d45872846ca45ad83f, type: 3}
+    - {fileID: 21300000, guid: bb2237b880a82224ab2889495a72d42b, type: 3}
+    - {fileID: 21300000, guid: 98d957c0b5dd0b446be814e486faef63, type: 3}
+    - {fileID: 21300000, guid: b07f9f1aaeb8b584bbae299383fd9995, type: 3}
+    - {fileID: 21300000, guid: 156e72d60a97653488ca9d838e4ea328, type: 3}
+    - {fileID: 21300000, guid: 7cc88f9ee951b6b4984b918a4b909d8e, type: 3}
+    - {fileID: 21300000, guid: 3e0a60159169c5f44823373eaa5806fd, type: 3}
+    - {fileID: 21300000, guid: 6106e30dae8eb724e803980580f9fdc9, type: 3}
+    - {fileID: 21300000, guid: 309d8a622d8ac0f4cba300ba96e86631, type: 3}
+    - {fileID: 21300000, guid: 7c2d320c301c1d846bec37b7a222dd6a, type: 3}
+    - {fileID: 21300000, guid: 59214a59884fd4e47a856d8fa9fbd6b3, type: 3}
+    - {fileID: 21300000, guid: 6ea1d5030965f8941bffc34fc501191b, type: 3}
+    - {fileID: 21300000, guid: 4398e73a5918e5e48a91d719407009c0, type: 3}
+    - {fileID: 21300000, guid: 5a904816aca026e40809db8c5842eccc, type: 3}
+    - {fileID: 21300000, guid: 29b456f281264d24291edb96110ee72b, type: 3}
+    - {fileID: 21300000, guid: 05e38bda5cb1f6a4fbbc203d3c44cf6b, type: 3}
+    - {fileID: 21300000, guid: 8aa0ade75765b1d47a14a1cd7b1956c5, type: 3}
+    AudioClip: {fileID: 8300000, guid: 6ce19c586448a1c44a59989eb12bbfc0, type: 3}
+    OffSkin: {fileID: 21300000, guid: b13b4122136540141b247f1807dd3491, type: 3}
+  AnimFrameTime: 0.08333334
+  PauseType: 0
+  PauseDuration: 0
+  ChangeToMode: 0

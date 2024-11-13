@@ -31,11 +31,14 @@ MonoBehaviour:
     - {fileID: 21300000, guid: e58f8fd81e7197e4a8d600caadf244c4, type: 3}
     - {fileID: 21300000, guid: 5e7dbdd6e1820004ca6961c1497e2ed2, type: 3}
     - {fileID: 21300000, guid: 680bf0e03f6754546a04a70ff68aacd7, type: 3}
-    AudioClip: {fileID: 8300000, guid: 2892d4c7e6ccfe9449bf5a2f5e6ef0a0, type: 3}
+    AudioClip: {fileID: 8300000, guid: 3c7f2f7e0cd29eb4696f11baf60fea9b, type: 3}
     OffSkin: {fileID: 21300000, guid: 9d030da9f631ce34cbab3fc79752e550, type: 3}
   - Mode: 2
     Animation:
     - {fileID: 21300000, guid: 34959154aaf268b48b06de4071d3d80a, type: 3}
-    AudioClip: {fileID: 8300000, guid: d1e987ef82a303748855dc6d3ee60c23, type: 3}
+    AudioClip: {fileID: 8300000, guid: cfe220cc901dcc9478b703ad9c613f4e, type: 3}
     OffSkin: {fileID: 21300000, guid: 34959154aaf268b48b06de4071d3d80a, type: 3}
+  AnimFrameTime: 0.08333334
+  PauseType: 0
+  PauseDuration: 0
   ChangeToMode: 0

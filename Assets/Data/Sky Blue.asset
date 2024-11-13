@@ -12,4 +12,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a971932b5fd6194d967e154b66bcbca, type: 3}
   m_Name: Sky Blue
   m_EditorClassIdentifier: 
-  ModesSettings: []
+  ModesSettings:
+  - Mode: 1
+    Animation:
+    - {fileID: 21300000, guid: 6ac0aa87abb0db24daf3e5e8a434b526, type: 3}
+    - {fileID: 21300000, guid: 941d55ab58e7854468c9e4654ae9d8d9, type: 3}
+    - {fileID: 21300000, guid: 4118963a092b7964585e333081d55641, type: 3}
+    - {fileID: 21300000, guid: 757060187c9937a4a8ecddc04a6e6cfc, type: 3}
+    - {fileID: 21300000, guid: e2841555d35d3ea42ac369ab9e88357a, type: 3}
+    - {fileID: 21300000, guid: 89867bb96a72eb64d872366deffb325a, type: 3}
+    - {fileID: 21300000, guid: 1610678656f38df47bf39d1d7a5265e5, type: 3}
+    - {fileID: 21300000, guid: 8a778c742bb75f54486c90e691e68cf8, type: 3}
+    - {fileID: 21300000, guid: 0c5dd1fd2e7475544b03596a7e022fb0, type: 3}
+    - {fileID: 21300000, guid: f64e2c75aa1d1324caeced242cccec36, type: 3}
+    - {fileID: 21300000, guid: be482f9b2282ef34c89e7de1b0939a9b, type: 3}
+    - {fileID: 21300000, guid: 36a17f0928ef26c4092f22b8b25b749e, type: 3}
+    - {fileID: 21300000, guid: 7c3cb345f183d0243adad5527172562b, type: 3}
+    - {fileID: 21300000, guid: 48fc4def5a758054996c59b12d4c8229, type: 3}
+    - {fileID: 21300000, guid: 8a3b83d20d51c1e4d81612262aee8213, type: 3}
+    - {fileID: 21300000, guid: 7e6d51f7810b6404486ac1024990f99e, type: 3}
+    - {fileID: 21300000, guid: 800ae5b0c25b42f47b2c995dc7b483d8, type: 3}
+    - {fileID: 21300000, guid: 80dbbd81663ddd6409cc6a06e4b22053, type: 3}
+    - {fileID: 21300000, guid: acead5135d0347f4b81e8f48be8ef7a8, type: 3}
+    - {fileID: 21300000, guid: bfca711800eb97a4498bc2480d2233c6, type: 3}
+    - {fileID: 21300000, guid: 606733e62d4126646bfed4887c243c01, type: 3}
+    - {fileID: 21300000, guid: 45ac92168a2113940af978fc41899337, type: 3}
+    - {fileID: 21300000, guid: 03fd9690948fd334cba85a8e9e8fd00f, type: 3}
+    - {fileID: 21300000, guid: a132eccff6a9da740a37ced7b9763191, type: 3}
+    - {fileID: 21300000, guid: 543cfe57e489f0d49ad8ef7acd930dee, type: 3}
+    - {fileID: 21300000, guid: a0d341ba26d125b4ca85c98600f960c4, type: 3}
+    - {fileID: 21300000, guid: ce75ce040503579438233bdcb9bdd866, type: 3}
+    - {fileID: 21300000, guid: 6b3d39500afdf02489ebf39a069788f7, type: 3}
+    AudioClip: {fileID: 8300000, guid: ab76a36842815d241aac5ba1c4295200, type: 3}
+    OffSkin: {fileID: 21300000, guid: 87fa6f62caed4484d867d9c41ce886b4, type: 3}
+  - Mode: 2
+    Animation:
+    - {fileID: 21300000, guid: 2adcc49f6e2ee604e8f452456560a390, type: 3}
+    - {fileID: 21300000, guid: c2ba3de1942004d4591b21e77d9d6561, type: 3}
+    - {fileID: 21300000, guid: 6153fe17b973c2d40a17541a7356404f, type: 3}
+    - {fileID: 21300000, guid: 3b6ba7a7a2a8cac4fa64f388a298ce86, type: 3}
+    - {fileID: 21300000, guid: 9105404b153ab7744b96b4df64f626fa, type: 3}
+    - {fileID: 21300000, guid: 4d37c977d2cdf4c46a70645bc5edba17, type: 3}
+    - {fileID: 21300000, guid: fc61d5098581d8f4fbca3d0af14a437b, type: 3}
+    - {fileID: 21300000, guid: eb51a51e2f0c4bc408d81b4d5cd31cea, type: 3}
+    AudioClip: {fileID: 8300000, guid: 5adbf05b8f450fa418adddcad87ebaab, type: 3}
+    OffSkin: {fileID: 21300000, guid: c15217a456645bb4bbee983d67b954e9, type: 3}
+  AnimFrameTime: 0.08333334
+  PauseType: 0
+  PauseDuration: 0
+  ChangeToMode: 0
