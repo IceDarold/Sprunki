@@ -13,6 +13,8 @@ public class SkinSO : ScriptableObject
     public float PauseDuration;
     public ModeType ChangeToMode;
     public string path;
+    public float AnimSpeed;
+    public Vector2 ImageScale = new Vector2(1,1);
 
     public Data GetData()
     {

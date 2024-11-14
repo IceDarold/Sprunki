@@ -17,6 +17,7 @@ public class CharacterAppearance : MonoBehaviour
 
     private int currentFrame = -1;
     private float currentTime;
+    private Vector2 cachedScale;
 
     private Coroutine MainAnim;
     private List<KeyValuePair<Sprite,float>> textures;
@@ -27,17 +28,11 @@ public class CharacterAppearance : MonoBehaviour
 
     private void Update()
     {
-        /*if(currentFrame != -1)
+        
+        if(currentFrame != -1)
         {
-            currentTime += Time.deltaTime;
-            if(currentTime >= skinData.AnimFrameTime)
-            {
-                currentTime = 0f;
-                currentFrame = (currentFrame + 1) % skinData.GetData().Animation.Count;
-                spriteRenderer.sprite = skinData.GetData().Animation[currentFrame];
-            }
-        }*/
-
+            transform.localScale = cachedScale * skinData.ImageScale;
+        }
     }
 
     public void SetSprite(bool isGlow)
@@ -61,8 +56,9 @@ public class CharacterAppearance : MonoBehaviour
         }
 
         skinData = skin;
-        currentFrame = 0;
+        
         currentTime = 0f;
+        cachedScale = transform.localScale;
 
         //spriteRenderer.sprite = skinData.GetData().Animation[currentFrame];
 
@@ -77,8 +73,11 @@ public class CharacterAppearance : MonoBehaviour
                 new Vector2(0.5f, 0.5f));
 
                 textures.Add(new KeyValuePair<Sprite, float>(sprite,item.m_delaySec));
-                MainAnim = StartCoroutine(MainAnimation());
+                
             }
+            
+            
+            MainAnim = StartCoroutine(MainAnimation());
         }));
 
         
@@ -133,7 +132,9 @@ public class CharacterAppearance : MonoBehaviour
             {
                 
                 spriteRenderer.sprite = item.Key;
-                yield return new WaitForSeconds(item.Value);
+                transform.localScale = skinData.ImageScale * cachedScale;
+                currentFrame = 0;
+                yield return new WaitForSeconds(item.Value / skinData.AnimSpeed);
 
             }
 
@@ -159,6 +160,7 @@ public class CharacterAppearance : MonoBehaviour
         }
 
         spriteRenderer.sprite = DefaultSprite;
+        transform.localScale = cachedScale;
 
         while(Vector3.Distance(transform.position, startPos) > 0.01f)
         {

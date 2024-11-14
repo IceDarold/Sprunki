@@ -32,8 +32,10 @@ MonoBehaviour:
     - {fileID: 21300000, guid: e7a7cdb8e2a706444bcd3abbedf90a6c, type: 3}
     AudioClip: {fileID: 8300000, guid: 3325f242c90d21a4dbfa96ece9405e1a, type: 3}
     OffSkin: {fileID: 21300000, guid: 79ea90b06db70734ca9e9c66e296c8df, type: 3}
-  AnimFrameTime: 0.08333334
+  AnimFrameTime: 0
   PauseType: 0
   PauseDuration: 0
   ChangeToMode: 0
   path: /Sprites/orange.gif
+  AnimSpeed: 1.1
+  ImageScale: {x: 0.69, y: 0.67}
