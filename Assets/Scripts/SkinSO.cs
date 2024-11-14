@@ -8,12 +8,9 @@ using UnityEngine;
 public class SkinSO : ScriptableObject
 {
     [SerializeField] private List<Data> ModesSettings;
-    [Min(0)] public float AnimFrameTime;
     public PauseType PauseType;
     public float PauseDuration;
     public ModeType ChangeToMode;
-    public string path;
-    public float AnimSpeed;
     public Vector2 ImageScale = new Vector2(1,1);
 
     public Data GetData()
@@ -26,7 +23,8 @@ public class SkinSO : ScriptableObject
 public class Data
 {
     public ModeType Mode;
-    public List<Sprite> Animation;
+    public string Path;
+    public float AnimSpeed;
     public AudioClip AudioClip;
     public Sprite OffSkin;
 }

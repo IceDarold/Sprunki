@@ -49,7 +49,7 @@ public class CharacterAppearance : MonoBehaviour
 
     public void AddSkin(SkinSO skin)
     {
-        if(skin == null || skin.GetData().Animation.Count == 0)
+        if(skin == null)
         {
             Debug.LogError("Add at least one sprite for animation");
             return;
@@ -62,7 +62,7 @@ public class CharacterAppearance : MonoBehaviour
 
         //spriteRenderer.sprite = skinData.GetData().Animation[currentFrame];
 
-        string gifPath = Application.dataPath + skin.path;
+        string gifPath = Application.dataPath + skin.GetData().Path;
         byte[] data = File.ReadAllBytes(gifPath);
         StartCoroutine(UniGif.GetTextureListCoroutine(data, (list, loopCount, width, height) =>
         {
@@ -111,7 +111,7 @@ public class CharacterAppearance : MonoBehaviour
         else
         {
             currentFrame = 0;
-            spriteRenderer.sprite = skinData.GetData().Animation[currentFrame];
+            //spriteRenderer.sprite = skinData.GetData().Animation[currentFrame];
             MainAnim = StartCoroutine(MainAnimation());
         }
     }
@@ -134,7 +134,7 @@ public class CharacterAppearance : MonoBehaviour
                 spriteRenderer.sprite = item.Key;
                 transform.localScale = skinData.ImageScale * cachedScale;
                 currentFrame = 0;
-                yield return new WaitForSeconds(item.Value / skinData.AnimSpeed);
+                yield return new WaitForSeconds(item.Value / skinData.GetData().AnimSpeed);
 
             }
 
