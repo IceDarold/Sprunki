@@ -12,6 +12,7 @@ public class SkinSO : ScriptableObject
     public PauseType PauseType;
     public float PauseDuration;
     public ModeType ChangeToMode;
+    public string path;
 
     public Data GetData()
     {

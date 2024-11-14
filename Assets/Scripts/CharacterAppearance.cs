@@ -1,6 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.Rendering;
+
 
 public class CharacterAppearance : MonoBehaviour
 {
@@ -15,6 +19,7 @@ public class CharacterAppearance : MonoBehaviour
     private float currentTime;
 
     private Coroutine MainAnim;
+    private List<KeyValuePair<Sprite,float>> textures;
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -59,9 +64,24 @@ public class CharacterAppearance : MonoBehaviour
         currentFrame = 0;
         currentTime = 0f;
 
-        spriteRenderer.sprite = skinData.GetData().Animation[currentFrame];
+        //spriteRenderer.sprite = skinData.GetData().Animation[currentFrame];
 
-        MainAnim =  StartCoroutine(MainAnimation());
+        string gifPath = Application.dataPath + skin.path;
+        byte[] data = File.ReadAllBytes(gifPath);
+        StartCoroutine(UniGif.GetTextureListCoroutine(data, (list, loopCount, width, height) =>
+        {
+            textures = new List<KeyValuePair<Sprite,float>>();
+            foreach (var item in list)
+            {
+                var sprite = Sprite.Create(item.m_texture2d, new Rect(0, 0, item.m_texture2d.width, item.m_texture2d.height),
+                new Vector2(0.5f, 0.5f));
+
+                textures.Add(new KeyValuePair<Sprite, float>(sprite,item.m_delaySec));
+                MainAnim = StartCoroutine(MainAnimation());
+            }
+        }));
+
+        
     }
 
     public void RemoveSkin()
@@ -100,6 +120,8 @@ public class CharacterAppearance : MonoBehaviour
 
     private IEnumerator MainAnimation()
     {
+        
+        
         while (true)
         {
             if (skinData.PauseType == PauseType.BeforeAnimation)
@@ -107,14 +129,16 @@ public class CharacterAppearance : MonoBehaviour
                 yield return new WaitForSeconds(skinData.PauseDuration);
             }
 
-            foreach (var item in skinData.GetData().Animation)
+            foreach (var item in textures)
             {
-                spriteRenderer.sprite = item;
-                yield return new WaitForSeconds(skinData.AnimFrameTime);
+                
+                spriteRenderer.sprite = item.Key;
+                yield return new WaitForSeconds(item.Value);
 
             }
 
-            spriteRenderer.sprite = skinData.GetData().Animation[0];
+            //spriteRenderer.sprite = skinData.GetData().Animation[0];
+
             if (skinData.PauseType == PauseType.AfterAnimation)
             {
                 yield return new WaitForSeconds(skinData.PauseDuration);

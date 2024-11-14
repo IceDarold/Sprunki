@@ -36,3 +36,4 @@ MonoBehaviour:
   PauseType: 0
   PauseDuration: 0
   ChangeToMode: 0
+  path: /Sprites/orange.gif
