@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MusicSyncController : MonoBehaviour
 {
     [SerializeField] private bool useSync = true;
     [SerializeField] private bool useSelfSync = true;
+    [SerializeField] private Text TestTimeText;
     
     public static float Time {  get; private set; }
 
@@ -17,7 +20,7 @@ public class MusicSyncController : MonoBehaviour
     
     private int character = 0;
     private int playing = 0;
-    private float _duration;
+
     private void Awake()
     {
         instance = this;
@@ -26,6 +29,11 @@ public class MusicSyncController : MonoBehaviour
 
     private void Update()
     {
+
+        if(TestTimeText != null)
+        {
+            TestTimeText.text = Time.ToString();
+        }
         if(instance.character == 0)
         {
             Time = 0f;
@@ -35,18 +43,18 @@ public class MusicSyncController : MonoBehaviour
         if(instance.playing > 0)
         {
             Time += UnityEngine.Time.deltaTime;
-            Time = Time % _duration;
-            Debug.Log(Time);
+            
         }
+
+        
     }
 
 
-    public static void Add(float duration)
+    public static void Add()
     {
         instance.character++;
         instance.playing++;
         
-        instance._duration = duration;
 
         
     }

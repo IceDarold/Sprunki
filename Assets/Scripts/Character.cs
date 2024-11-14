@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
 
+
 [RequireComponent(typeof(SpriteRenderer),typeof(AudioSource),typeof(UpdatedSpriteRenderer))]
 public class Character : MonoBehaviour
 {
@@ -144,8 +145,8 @@ public class Character : MonoBehaviour
 
         if (MusicSyncController.UseSync)
         {
-            MusicSyncController.Add(clip.length);
-            audioSource.time = MusicSyncController.Time;
+            MusicSyncController.Add();
+            audioSource.time = MusicSyncController.Time % clip.length;
         }
         
         audioSource.Play();
