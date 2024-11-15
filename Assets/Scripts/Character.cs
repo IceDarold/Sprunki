@@ -116,7 +116,12 @@ public class Character : MonoBehaviour
             {
                 audioSource.time = cachedTime;
             }
-            
+
+            if (MusicSyncController.UseSync)
+            {
+                audioSource.time = MusicSyncController.Time % obj.SkinSO.GetData().AudioClip.length;
+            }
+
             audioSource.Play();
             isMute = false;
         }
