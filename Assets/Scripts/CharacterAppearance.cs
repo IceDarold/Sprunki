@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -47,7 +48,7 @@ public class CharacterAppearance : MonoBehaviour
         }
     }
 
-    public void AddSkin(SkinSO skin)
+    public void AddSkin(SkinSO skin, Action callback )
     {
         if(skin == null)
         {
@@ -75,8 +76,8 @@ public class CharacterAppearance : MonoBehaviour
                 textures.Add(new KeyValuePair<Sprite, float>(sprite,item.m_delaySec));
                 
             }
-            
-            
+
+            callback?.Invoke();
             MainAnim = StartCoroutine(MainAnimation());
         }));
 

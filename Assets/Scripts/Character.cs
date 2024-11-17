@@ -74,8 +74,8 @@ public class Character : MonoBehaviour
             }
             
 
-            SetupAudioSource();
-            characterAppearance.AddSkin(obj.SkinSO);
+            
+            characterAppearance.AddSkin(obj.SkinSO, SetupAudioSource);
             
         }
     }
