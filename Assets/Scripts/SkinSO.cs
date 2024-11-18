@@ -11,7 +11,7 @@ public class SkinSO : ScriptableObject
     public PauseType PauseType;
     public float PauseDuration;
     public ModeType ChangeToMode;
-    public Vector2 ImageScale = new Vector2(1,1);
+
 
     public Data GetData()
     {
@@ -25,8 +25,10 @@ public class Data
     public ModeType Mode;
     public string Path;
     public float AnimSpeed;
+    public Vector2 GifScale = new Vector2 (1,1);
     public AudioClip AudioClip;
     public Sprite OffSkin;
+    public Vector2 OffSkinScale = new Vector2(1,1);
 }
 
 

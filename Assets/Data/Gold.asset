@@ -14,28 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModesSettings:
   - Mode: 1
-    Animation:
-    - {fileID: 21300000, guid: 93d99870da0cb6644ade595ae40ccd9f, type: 3}
-    - {fileID: 21300000, guid: ba23c8b93c318d64b8ba88272461ace0, type: 3}
-    - {fileID: 21300000, guid: 54aee860890cc474993d115d0da1b529, type: 3}
-    - {fileID: 21300000, guid: 9f5f2f6f62944ae44abcd7a07d154fb5, type: 3}
-    - {fileID: 21300000, guid: ac490e572c90ad3499778596dd8305e6, type: 3}
-    - {fileID: 21300000, guid: 518e146565dc77046b1bffe446c989cf, type: 3}
+    Path: /Sprites/Animation/gold.gif
+    AnimSpeed: 1
+    GifScale: {x: 1, y: 1}
     AudioClip: {fileID: 8300000, guid: 4e81494fb632b5d439769697069419d9, type: 3}
     OffSkin: {fileID: 21300000, guid: 2cdcd725d8ff65047b5b743855a7127f, type: 3}
+    OffSkinScale: {x: 0, y: 0}
   - Mode: 2
-    Animation:
-    - {fileID: 21300000, guid: ffede8cba14cd8c44bde16daed4d4191, type: 3}
-    - {fileID: 21300000, guid: 9078eab88aceac84c97fdab40e852789, type: 3}
-    - {fileID: 21300000, guid: c5e2ce3b4867f884ebea6d5c5af58277, type: 3}
-    - {fileID: 21300000, guid: 39be1b97b489be345a8e807f9722ee5b, type: 3}
-    - {fileID: 21300000, guid: 1d3cc7c7625621445bd9327407916be2, type: 3}
-    - {fileID: 21300000, guid: f057f9809729d474aa0ccf074390a9b9, type: 3}
-    - {fileID: 21300000, guid: fecd4214026eea64b8a00e365b435eb9, type: 3}
-    - {fileID: 21300000, guid: a822df17a8ebda64cbdbce717671580d, type: 3}
+    Path: /Sprites/Animation/gold horror.gif
+    AnimSpeed: 1
+    GifScale: {x: 1, y: 1}
     AudioClip: {fileID: 8300000, guid: 7631045e31a02b247b2deb5e2daafc00, type: 3}
     OffSkin: {fileID: 21300000, guid: 939eb738d945b104b9830e2dd7d87581, type: 3}
-  AnimFrameTime: 0.08333334
+    OffSkinScale: {x: 0, y: 0}
   PauseType: 0
   PauseDuration: 0
   ChangeToMode: 0

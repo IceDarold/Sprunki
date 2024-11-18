@@ -14,55 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModesSettings:
   - Mode: 1
-    Animation:
-    - {fileID: 21300000, guid: 516e7510096159342b1d3966e5227fea, type: 3}
-    - {fileID: 21300000, guid: ea761e9cf8634f44f81f69aa87e4af6b, type: 3}
-    - {fileID: 21300000, guid: 7cdd188a92d9bb34c94d03ba55ee9e3d, type: 3}
-    - {fileID: 21300000, guid: de8b8ac5b0b666b4bbd8b0f59cb83c86, type: 3}
-    - {fileID: 21300000, guid: 495871f235824a44e991fa38fe3e0e5d, type: 3}
-    - {fileID: 21300000, guid: 94674d9730a405e48ab934b4d10bcc16, type: 3}
-    - {fileID: 21300000, guid: 49304f31c1cfda44db00e61ff91af733, type: 3}
-    - {fileID: 21300000, guid: 0fc52809763e3854bad6bb8cc7bc25c9, type: 3}
-    - {fileID: 21300000, guid: 90ceb970ae094374a9dc49abe3ee2a2c, type: 3}
-    - {fileID: 21300000, guid: 86448f82f553ede4288213a0730b248a, type: 3}
-    - {fileID: 21300000, guid: c01bfa89726d64b45b90fa340303a5ff, type: 3}
-    - {fileID: 21300000, guid: 02775521bfdb9ae48b5caff7f0ac81c1, type: 3}
-    - {fileID: 21300000, guid: 9a1f8d084069a8b48b79154b165d86ac, type: 3}
-    - {fileID: 21300000, guid: 8f3291d2ee898834e8ac45f04824f229, type: 3}
-    - {fileID: 21300000, guid: 8ad1d51c1e0e0e045a4149aa94a0b90a, type: 3}
-    - {fileID: 21300000, guid: 66d1e84ae21b6604c87f66d19ba4554d, type: 3}
+    Path: /Sprites/Animation/BrudAnim.gif
+    AnimSpeed: 1
+    GifScale: {x: 0.6, y: 0.6}
     AudioClip: {fileID: 8300000, guid: 82ef864246a07364db13928656c3ebce, type: 3}
     OffSkin: {fileID: 21300000, guid: c3cad3ec5536a4445b78bc3ba742a28b, type: 3}
+    OffSkinScale: {x: 0.6, y: 0.6}
   - Mode: 2
-    Animation:
-    - {fileID: 21300000, guid: d251cb0c9f6f1be49bbc326f9b52a55d, type: 3}
-    - {fileID: 21300000, guid: 6b2ac90b96ffe024e9ecfd23b55bccc2, type: 3}
-    - {fileID: 21300000, guid: 037b3bac5f9c88346b7b8cf767f49c09, type: 3}
-    - {fileID: 21300000, guid: bf2b1a631442b5d46bbb08eb25c3b27c, type: 3}
-    - {fileID: 21300000, guid: 49b4b66de79fd804b8354f4fe6bfd4ee, type: 3}
-    - {fileID: 21300000, guid: d46c3fcbd0d11b94f8762da59af3972b, type: 3}
-    - {fileID: 21300000, guid: 4009ecbba85bf7645be48c34f1e37669, type: 3}
-    - {fileID: 21300000, guid: 4f770a643d8b0324b998da01296f488b, type: 3}
-    - {fileID: 21300000, guid: bf1a4fbff1ecb1a42b0f0e525003b088, type: 3}
-    - {fileID: 21300000, guid: 62c275c6cdfced34892ae49563b30452, type: 3}
-    - {fileID: 21300000, guid: 4c9281df87e18fc4ea801c7465421135, type: 3}
-    - {fileID: 21300000, guid: dd73c14e86230e544b44d41f9b2e4d2a, type: 3}
-    - {fileID: 21300000, guid: 6c32732d9459ad246b3897998853770d, type: 3}
-    - {fileID: 21300000, guid: 9147232c5ec7d9a449cd0559ecd1bbe8, type: 3}
-    - {fileID: 21300000, guid: 93634e6ba17a91049a8bae293ae71a54, type: 3}
-    - {fileID: 21300000, guid: dcedf3e05330f13478c0e00bb7f08f62, type: 3}
-    - {fileID: 21300000, guid: e7c3642ded907734480cda8fc0ba8690, type: 3}
-    - {fileID: 21300000, guid: f55dfaf20bf1cb1418fee45739820162, type: 3}
-    - {fileID: 21300000, guid: a9a244214e94c55478098db98008d0d7, type: 3}
-    - {fileID: 21300000, guid: 8a660294505dc1044a41c23d6bf47627, type: 3}
-    - {fileID: 21300000, guid: e7c0c4e72c1f8764e8c1700199fa5d78, type: 3}
-    - {fileID: 21300000, guid: d2d1cc8d65f4e134a89f1a99e5902619, type: 3}
-    - {fileID: 21300000, guid: 817b102351367ba49915a6d4623a7cb3, type: 3}
-    - {fileID: 21300000, guid: 2c6068d52a7895d41bb4abfe73c6ee3b, type: 3}
-    - {fileID: 21300000, guid: ec359ed7e45c57344a5c2b2cf0ad005f, type: 3}
+    Path: /Sprites/Animation/BrudAAAAnim.gif
+    AnimSpeed: 1
+    GifScale: {x: 0.6, y: 0.6}
     AudioClip: {fileID: 8300000, guid: 8133550e618766c4f8ada5624bc260f8, type: 3}
     OffSkin: {fileID: 21300000, guid: f276575877c49634386eac40d28cc202, type: 3}
-  AnimFrameTime: 0.08333334
+    OffSkinScale: {x: 1.8, y: 1.8}
   PauseType: 0
   PauseDuration: 0
   ChangeToMode: 0

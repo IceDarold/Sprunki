@@ -44,7 +44,9 @@ public static partial class UniGif
             disposalMethodList.Add(GetDisposalMethod(graphicCtrlEx));
 
             Color32 bgColor;
+            
             List<byte[]> colorTable = GetColorTableAndSetBgColor(gifData, gifData.m_imageBlockList[i], transparentIndex, out bgColor);
+            bgColor.a = 0;
 
             yield return 0;
 
@@ -209,6 +211,7 @@ public static partial class UniGif
             for (int i = 0; i < pix.Length; i++)
             {
                 pix[i] = bgColor;
+
             }
             tex.SetPixels32(pix);
             tex.Apply();

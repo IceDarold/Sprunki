@@ -14,38 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModesSettings:
   - Mode: 1
-    Animation:
-    - {fileID: 21300000, guid: 0cd96e5e78fedee48bd23a7b551ff9fe, type: 3}
-    - {fileID: 21300000, guid: 4df30e28827943d4b8a229bebec0b18c, type: 3}
-    - {fileID: 21300000, guid: 3b30f95687c953146809818745e4b812, type: 3}
-    - {fileID: 21300000, guid: d8e12c11858447b4ea952be5d3c3044c, type: 3}
-    - {fileID: 21300000, guid: 224ff3673e5d0c84f97a9b53638a3f01, type: 3}
-    - {fileID: 21300000, guid: 821d33c8dff547e4b961875cda253634, type: 3}
-    - {fileID: 21300000, guid: 1913bc85d5bbb4f48981e0a89f2cf232, type: 3}
-    - {fileID: 21300000, guid: dc582cae8711030419210190d7ba7b00, type: 3}
-    - {fileID: 21300000, guid: 1616de3dcdd330042ad24660b8a1680c, type: 3}
-    - {fileID: 21300000, guid: b63270903cf41d945b798f7436cc8266, type: 3}
-    - {fileID: 21300000, guid: 0490586c9e9fcac4eb65bc94cb8f7037, type: 3}
-    - {fileID: 21300000, guid: 658d91c078e2a9a44839d7d0146427c1, type: 3}
-    - {fileID: 21300000, guid: cec82d46e57a7764b8df39573d03ef73, type: 3}
-    - {fileID: 21300000, guid: dc260fc66cb7d2f46ad00f799e2e53b6, type: 3}
-    - {fileID: 21300000, guid: caddb68c457d79440a4b3a0f97acc866, type: 3}
-    - {fileID: 21300000, guid: d3eb6f1abfefb0c4dafb5260389a52b5, type: 3}
+    Path: /Sprites/Animation/JevinSing.gif
+    AnimSpeed: 1
+    GifScale: {x: 0.84, y: 0.73}
     AudioClip: {fileID: 8300000, guid: db2acbb7dee5ef94e9960bd615f1b68d, type: 3}
     OffSkin: {fileID: 21300000, guid: f379331101be1c94aa5341009ac974a0, type: 3}
+    OffSkinScale: {x: 0.94, y: 0.8}
   - Mode: 2
-    Animation:
-    - {fileID: 21300000, guid: c253d2616df14664ebd7f68860e3e586, type: 3}
-    - {fileID: 21300000, guid: ee7c66714587ed14a90602568590b96f, type: 3}
-    - {fileID: 21300000, guid: 342e1cc464d35f944b0f11c6aa06d3ba, type: 3}
-    - {fileID: 21300000, guid: 43411b9a0bf75f84981113f0439f37fe, type: 3}
-    - {fileID: 21300000, guid: ec358dd1b2723484fb228a1fb6854257, type: 3}
-    - {fileID: 21300000, guid: 3b4dc6d05effed34e8bde5c104b3ebdc, type: 3}
-    - {fileID: 21300000, guid: 24277a16bc4e1df4794c5ad851a1a603, type: 3}
-    - {fileID: 21300000, guid: 48929264a7c512242b096ea1c3dc0e04, type: 3}
+    Path: /Sprites/Animation/JevinHorrorSingReal.gif
+    AnimSpeed: 1
+    GifScale: {x: 0.84, y: 0.73}
     AudioClip: {fileID: 8300000, guid: 86b85e5bd1cd43b4e872aeb2d903096f, type: 3}
     OffSkin: {fileID: 21300000, guid: 52ae37766d86df94880e374315bce363, type: 3}
-  AnimFrameTime: 0.08333334
+    OffSkinScale: {x: 1.7, y: 1.5}
   PauseType: 0
   PauseDuration: 0
   ChangeToMode: 0

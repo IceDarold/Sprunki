@@ -99,6 +99,7 @@ public class Character : MonoBehaviour
     {
         if(!isSkinned) return;
 
+        float time = 0f;
         if (!isMute)
         {
             if(MusicSyncController.UseSelfSync)
@@ -120,12 +121,16 @@ public class Character : MonoBehaviour
             if (MusicSyncController.UseSync)
             {
                 audioSource.time = MusicSyncController.Time % obj.SkinSO.GetData().AudioClip.length;
+                time = audioSource.time;
+
+                
             }
 
             audioSource.Play();
             isMute = false;
         }
 
+        
         characterAppearance.Mute(isMute);
         MusicSyncController.MuteState(isMute);
 
@@ -142,6 +147,7 @@ public class Character : MonoBehaviour
     {
         AudioClip clip = obj.SkinSO.GetData().AudioClip;
 
+
         if(clip == null)
         {
             return;
@@ -152,6 +158,7 @@ public class Character : MonoBehaviour
         {
             MusicSyncController.Add();
             audioSource.time = MusicSyncController.Time % clip.length;
+
         }
         
         audioSource.Play();

@@ -19,6 +19,7 @@ public class CharacterAppearance : MonoBehaviour
     private int currentFrame = -1;
     private float currentTime;
     private Vector2 cachedScale;
+    private float GifTime;
 
     private Coroutine MainAnim;
     private List<KeyValuePair<Sprite,float>> textures;
@@ -32,7 +33,7 @@ public class CharacterAppearance : MonoBehaviour
         
         if(currentFrame != -1)
         {
-            transform.localScale = cachedScale * skinData.ImageScale;
+            transform.localScale = cachedScale * skinData.GetData().GifScale;
         }
     }
 
@@ -71,9 +72,11 @@ public class CharacterAppearance : MonoBehaviour
             foreach (var item in list)
             {
                 var sprite = Sprite.Create(item.m_texture2d, new Rect(0, 0, item.m_texture2d.width, item.m_texture2d.height),
-                new Vector2(0.5f, 0.5f));
+                new Vector2(0.5f, 0.5f),100,1,SpriteMeshType.Tight);
 
+                
                 textures.Add(new KeyValuePair<Sprite, float>(sprite,item.m_delaySec));
+                GifTime += item.m_delaySec;
                 
             }
 
@@ -108,9 +111,12 @@ public class CharacterAppearance : MonoBehaviour
 
             currentFrame = -1;
             currentTime = 0f;
+
+            transform.localScale = cachedScale * skinData.GetData().OffSkinScale;
         }
         else
         {
+            transform.localScale = cachedScale * skinData.GetData().GifScale;
             currentFrame = 0;
             //spriteRenderer.sprite = skinData.GetData().Animation[currentFrame];
             MainAnim = StartCoroutine(MainAnimation());
@@ -120,7 +126,11 @@ public class CharacterAppearance : MonoBehaviour
 
     private IEnumerator MainAnimation()
     {
-        
+        float delta = MusicSyncController.Time % GifTime;
+        if(delta != 0)
+        {
+            Debug.Log(delta);
+        }
         
         while (true)
         {
@@ -129,13 +139,29 @@ public class CharacterAppearance : MonoBehaviour
                 yield return new WaitForSeconds(skinData.PauseDuration);
             }
 
+            int i = -1;
             foreach (var item in textures)
             {
-                
+                i += 1;
+                float a = 0f;
+
+                if(delta - item.Value / skinData.GetData().AnimSpeed > 0)
+                {
+                    delta -= item.Value / skinData.GetData().AnimSpeed;
+                    continue;
+                }
+                else if(delta != 0f)
+                {
+                    a = delta - item.Value / skinData.GetData().AnimSpeed;
+                    delta = 0f;
+                }
+
+                //Debug.Log(i);
+
                 spriteRenderer.sprite = item.Key;
-                transform.localScale = skinData.ImageScale * cachedScale;
+                transform.localScale = skinData.GetData().GifScale * cachedScale;
                 currentFrame = 0;
-                yield return new WaitForSeconds(item.Value / skinData.GetData().AnimSpeed);
+                yield return new WaitForSeconds(item.Value / skinData.GetData().AnimSpeed + a);
 
             }
 
