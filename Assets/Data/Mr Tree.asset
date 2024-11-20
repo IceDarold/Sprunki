@@ -14,31 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModesSettings:
   - Mode: 1
-    Animation:
-    - {fileID: 21300000, guid: 75b57412f8de96d4c90ab8a67d0eacc7, type: 3}
-    - {fileID: 21300000, guid: 97873ab51820a2f46a60fe0122d62a0e, type: 3}
-    - {fileID: 21300000, guid: fb0ef704f45572c4e958e72e0b043b5b, type: 3}
-    - {fileID: 21300000, guid: d8fb2ffc1298416468a705c0eae9016b, type: 3}
-    - {fileID: 21300000, guid: e149930a238dfe440b3f90a11132df30, type: 3}
-    - {fileID: 21300000, guid: 568de5b5d6f8a844a9b38af723c88bd7, type: 3}
-    - {fileID: 21300000, guid: ece343939e72fd244986b6a698e6ef08, type: 3}
-    - {fileID: 21300000, guid: 860397a5fb21fc048a42de80cfa8d130, type: 3}
-    - {fileID: 21300000, guid: 69b560050f3824a4cab9eef2e6160525, type: 3}
-    - {fileID: 21300000, guid: 471003e95f1d1c44d9b9a903d80ec773, type: 3}
-    - {fileID: 21300000, guid: 9722bef773d4dae4cac0b929f4116ca5, type: 3}
-    - {fileID: 21300000, guid: ef1dbe1857b7e13488a919063bd6f2d4, type: 3}
-    - {fileID: 21300000, guid: 4164e6d075033f647ae5b8f2b36b0f05, type: 3}
-    - {fileID: 21300000, guid: e58f8fd81e7197e4a8d600caadf244c4, type: 3}
-    - {fileID: 21300000, guid: 5e7dbdd6e1820004ca6961c1497e2ed2, type: 3}
-    - {fileID: 21300000, guid: 680bf0e03f6754546a04a70ff68aacd7, type: 3}
+    Path: /Sprites/Animation/tree.gif
+    AnimSpeed: 1
+    GifScale: {x: 1, y: 1}
     AudioClip: {fileID: 8300000, guid: 3c7f2f7e0cd29eb4696f11baf60fea9b, type: 3}
+    PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: 9d030da9f631ce34cbab3fc79752e550, type: 3}
+    OffSkinScale: {x: 1, y: 1}
   - Mode: 2
-    Animation:
-    - {fileID: 21300000, guid: 34959154aaf268b48b06de4071d3d80a, type: 3}
+    Path: /Sprites/Animation/treehorror.png
+    AnimSpeed: 1
+    GifScale: {x: 1, y: 1}
     AudioClip: {fileID: 8300000, guid: cfe220cc901dcc9478b703ad9c613f4e, type: 3}
+    PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: 34959154aaf268b48b06de4071d3d80a, type: 3}
-  AnimFrameTime: 0.08333334
+    OffSkinScale: {x: 1, y: 1}
   PauseType: 0
-  PauseDuration: 0
   ChangeToMode: 0

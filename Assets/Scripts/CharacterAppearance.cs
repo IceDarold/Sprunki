@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -18,7 +19,10 @@ public class CharacterAppearance : MonoBehaviour
 
     private int currentFrame = -1;
     private float currentTime;
+
     private Vector2 cachedScale;
+    private Vector3 cachedPosition;
+
     private float GifTime;
 
     private Coroutine MainAnim;
@@ -34,6 +38,7 @@ public class CharacterAppearance : MonoBehaviour
         if(currentFrame != -1)
         {
             transform.localScale = cachedScale * skinData.GetData().GifScale;
+            transform.position = cachedPosition + skinData.GetData().Offset;
         }
     }
 
@@ -61,6 +66,10 @@ public class CharacterAppearance : MonoBehaviour
         
         currentTime = 0f;
         cachedScale = transform.localScale;
+        cachedPosition = transform.position;
+
+
+        
 
         //spriteRenderer.sprite = skinData.GetData().Animation[currentFrame];
 
@@ -80,7 +89,10 @@ public class CharacterAppearance : MonoBehaviour
                 
             }
 
+            GifTime += skinData.GetData().PauseDuration;
+
             callback?.Invoke();
+            transform.position += skinData.GetData().Offset;
             MainAnim = StartCoroutine(MainAnimation());
         }));
 
@@ -118,6 +130,7 @@ public class CharacterAppearance : MonoBehaviour
         {
             transform.localScale = cachedScale * skinData.GetData().GifScale;
             currentFrame = 0;
+            Debug.Log("UnMute");
             //spriteRenderer.sprite = skinData.GetData().Animation[currentFrame];
             MainAnim = StartCoroutine(MainAnimation());
         }
@@ -136,13 +149,16 @@ public class CharacterAppearance : MonoBehaviour
         {
             if (skinData.PauseType == PauseType.BeforeAnimation)
             {
-                yield return new WaitForSeconds(skinData.PauseDuration);
+                float pause = delta - skinData.GetData().PauseDuration >= 0 ? 0f : skinData.GetData().PauseDuration - delta;
+                delta = Mathf.Max(delta -  skinData.GetData().PauseDuration, 0f);
+                yield return new WaitForSeconds(pause);
             }
 
-            int i = -1;
+
+            bool flag = false;
             foreach (var item in textures)
             {
-                i += 1;
+                
                 float a = 0f;
 
                 if(delta - item.Value / skinData.GetData().AnimSpeed > 0)
@@ -157,19 +173,28 @@ public class CharacterAppearance : MonoBehaviour
                 }
 
                 //Debug.Log(i);
-
+               
                 spriteRenderer.sprite = item.Key;
                 transform.localScale = skinData.GetData().GifScale * cachedScale;
                 currentFrame = 0;
                 yield return new WaitForSeconds(item.Value / skinData.GetData().AnimSpeed + a);
+                flag = true;
 
+            }
+
+            if (!flag)
+            {
+                spriteRenderer.sprite = textures[textures.Count - 1].Key;
+                transform.localScale = skinData.GetData().GifScale * cachedScale;
             }
 
             //spriteRenderer.sprite = skinData.GetData().Animation[0];
 
             if (skinData.PauseType == PauseType.AfterAnimation)
             {
-                yield return new WaitForSeconds(skinData.PauseDuration);
+                float pause = delta - skinData.GetData().PauseDuration >= 0 ? 0f : skinData.GetData().PauseDuration - delta;
+                delta = Mathf.Max(delta - skinData.GetData().PauseDuration, 0f);
+                yield return new WaitForSeconds(pause);
             }
         }
         
@@ -178,7 +203,7 @@ public class CharacterAppearance : MonoBehaviour
     private IEnumerator RemoveSkinAnimation()
     {
         float distance = 5f;
-        Vector3 startPos = transform.position;
+        Vector3 startPos = cachedPosition;
         Vector3 goal = startPos - new Vector3(0, distance, 0);
         while (Vector3.Distance(transform.position, goal) > 0.01f)
         {
@@ -188,6 +213,7 @@ public class CharacterAppearance : MonoBehaviour
 
         spriteRenderer.sprite = DefaultSprite;
         transform.localScale = cachedScale;
+        
 
         while(Vector3.Distance(transform.position, startPos) > 0.01f)
         {

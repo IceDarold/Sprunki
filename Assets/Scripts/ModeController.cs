@@ -20,6 +20,13 @@ namespace Assets.Scripts
             Mode = Start;
         }
 
+        [ContextMenu("Set Start Mode")]
+        public void SetModeDevelopTool()
+        {
+            Mode = Start;
+            OnModeChanged?.Invoke();
+        }
+
         public static void SetMode(ModeType type)
         {
             Mode = type;

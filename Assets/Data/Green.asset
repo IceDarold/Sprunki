@@ -14,26 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModesSettings:
   - Mode: 1
-    Animation:
-    - {fileID: 21300000, guid: ff12f0f9d6a815b4f98884979bf57eb7, type: 3}
-    - {fileID: 21300000, guid: f8c5d2d566b966f4c893a637acfd894b, type: 3}
-    - {fileID: 21300000, guid: c05a79f9a6296ed45b8f85d554576d0e, type: 3}
-    - {fileID: 21300000, guid: c5cd675e89466b747be121537e0caa22, type: 3}
-    - {fileID: 21300000, guid: 348b00af8e40e7549b66e9362d9ffa58, type: 3}
-    - {fileID: 21300000, guid: 4882a5f46c35f36489f1baab124200a5, type: 3}
-    - {fileID: 21300000, guid: 7bbb7619ffed9264d98c27a5194aac01, type: 3}
-    - {fileID: 21300000, guid: 1187d34e9622b2f42b605e2442454316, type: 3}
+    Path: /Sprites/Animation/green.gif
+    AnimSpeed: 1
+    GifScale: {x: 0.95, y: 0.95}
     AudioClip: {fileID: 8300000, guid: 37ac51b0ae72efb47a71e396c1746770, type: 3}
+    PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: ccd363cb0f18f724fa9bc146fb150cd2, type: 3}
+    OffSkinScale: {x: 0.6, y: 0.6}
   - Mode: 2
-    Animation:
-    - {fileID: 21300000, guid: 69f69f1273462a548a7dbe43d1a61a94, type: 3}
-    - {fileID: 21300000, guid: e34ace201ad83294094bedea11ba8e09, type: 3}
-    - {fileID: 21300000, guid: 9e15257d4dc5d2a4a90ee78eb8307437, type: 3}
-    - {fileID: 21300000, guid: 3706ee032431e944cbb98ac2d3ae7322, type: 3}
+    Path: /Sprites/Animation/greenhorror.gif
+    AnimSpeed: 1
+    GifScale: {x: 0.95, y: 0.95}
     AudioClip: {fileID: 8300000, guid: 6a70f9c0d160cb34b8be962b89b6de79, type: 3}
+    PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: 50571510769fe5641b4f74d86501df3e, type: 3}
-  AnimFrameTime: 0.08333334
+    OffSkinScale: {x: 1.2, y: 1.2}
   PauseType: 1
-  PauseDuration: 0
   ChangeToMode: 0

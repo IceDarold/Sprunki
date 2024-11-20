@@ -16,17 +16,20 @@ MonoBehaviour:
   - Mode: 1
     Path: /Sprites/Animation/orange.gif
     AnimSpeed: 1
-    GifScale: {x: 1, y: 1}
+    GifScale: {x: 0.9, y: 0.9}
     AudioClip: {fileID: 8300000, guid: 52598dc9246652a49b7d18c1f8052a99, type: 3}
+    PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: c4c0d7a629e626f48a4dae4f7a3ac956, type: 3}
-    OffSkinScale: {x: 0, y: 0}
+    OffSkinScale: {x: 0.9, y: 0.9}
+    Offset: {x: 0, y: 0, z: 0}
   - Mode: 2
     Path: /Sprites/Animation/orangehorror.gif
     AnimSpeed: 1
-    GifScale: {x: 1, y: 1}
+    GifScale: {x: 0.95, y: 0.95}
     AudioClip: {fileID: 8300000, guid: 3325f242c90d21a4dbfa96ece9405e1a, type: 3}
+    PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: 79ea90b06db70734ca9e9c66e296c8df, type: 3}
-    OffSkinScale: {x: 0, y: 0}
+    OffSkinScale: {x: 0.95, y: 0.95}
+    Offset: {x: 0, y: 0, z: 0}
   PauseType: 0
-  PauseDuration: 0
   ChangeToMode: 0

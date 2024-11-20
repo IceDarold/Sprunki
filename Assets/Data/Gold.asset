@@ -16,17 +16,18 @@ MonoBehaviour:
   - Mode: 1
     Path: /Sprites/Animation/gold.gif
     AnimSpeed: 1
-    GifScale: {x: 1, y: 1}
+    GifScale: {x: 0.6, y: 0.6}
     AudioClip: {fileID: 8300000, guid: 4e81494fb632b5d439769697069419d9, type: 3}
+    PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: 2cdcd725d8ff65047b5b743855a7127f, type: 3}
-    OffSkinScale: {x: 0, y: 0}
+    OffSkinScale: {x: 0.28, y: 0.28}
   - Mode: 2
     Path: /Sprites/Animation/gold horror.gif
     AnimSpeed: 1
-    GifScale: {x: 1, y: 1}
+    GifScale: {x: 0.6, y: 0.6}
     AudioClip: {fileID: 8300000, guid: 7631045e31a02b247b2deb5e2daafc00, type: 3}
+    PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: 939eb738d945b104b9830e2dd7d87581, type: 3}
-    OffSkinScale: {x: 0, y: 0}
+    OffSkinScale: {x: 1.8, y: 1.8}
   PauseType: 0
-  PauseDuration: 0
   ChangeToMode: 0

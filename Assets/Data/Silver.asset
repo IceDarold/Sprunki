@@ -14,28 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModesSettings:
   - Mode: 1
-    Animation:
-    - {fileID: 21300000, guid: f7d36d9069dda6c4cab9d14339d948a4, type: 3}
-    - {fileID: 21300000, guid: 8173a3d64fa33134882e50270ba3f6f0, type: 3}
-    - {fileID: 21300000, guid: 8e62e2646397d4342bce2ec4b7c83c3b, type: 3}
-    - {fileID: 21300000, guid: 132d807b0d3b64947800316a3e739f6c, type: 3}
-    - {fileID: 21300000, guid: 5d33cfa04f0f8f142bd29f80b4efaa78, type: 3}
-    - {fileID: 21300000, guid: b23b32cdcf1d2104e9d092c367489acb, type: 3}
-    - {fileID: 21300000, guid: 04bb2fc259661b04b949934d37cf660a, type: 3}
-    - {fileID: 21300000, guid: d5053aa1746e61845aeff84dd50e66c0, type: 3}
+    Path: /Sprites/Animation/silver.gif
+    AnimSpeed: 1
+    GifScale: {x: 0.95, y: 0.95}
     AudioClip: {fileID: 8300000, guid: aaf2f68470d900d4dad4cd4c676f938a, type: 3}
+    PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: 4d7a3e58c5dfd8849811061d1eacc013, type: 3}
+    OffSkinScale: {x: 0.95, y: 0.95}
+    Offset: {x: 0, y: 0, z: 0}
   - Mode: 2
-    Animation:
-    - {fileID: 21300000, guid: e58f66248a980c444aa26504345f1dd5, type: 3}
-    - {fileID: 21300000, guid: b1325d13b2fc71a4fb249fd433eccbe0, type: 3}
-    - {fileID: 21300000, guid: 28bccc362e830ae409b80059fbf9f5ce, type: 3}
-    - {fileID: 21300000, guid: 393409cfe5f23214490d6349446a0f30, type: 3}
-    - {fileID: 21300000, guid: 083da45e9bd22e04ab868b10b71198bc, type: 3}
-    - {fileID: 21300000, guid: be69bddb3fd42c5489b744d8fb8e7985, type: 3}
+    Path: /Sprites/Animation/silverhorror.gif
+    AnimSpeed: 1
+    GifScale: {x: 1, y: 1}
     AudioClip: {fileID: 8300000, guid: 222ef32933ac7644392493596c973a36, type: 3}
+    PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: b799783196e99f543b4335304db85e2e, type: 3}
-  AnimFrameTime: 0.08333334
+    OffSkinScale: {x: 1, y: 1}
+    Offset: {x: 0, y: 0, z: 0}
   PauseType: 0
-  PauseDuration: 0
   ChangeToMode: 0

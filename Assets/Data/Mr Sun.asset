@@ -14,55 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModesSettings:
   - Mode: 1
-    Animation:
-    - {fileID: 21300000, guid: f482b90a6391f63498840dffdf487b74, type: 3}
-    - {fileID: 21300000, guid: 8198b47ee12373c409714f4274d4b306, type: 3}
-    - {fileID: 21300000, guid: 6639e35ba51885147804ad9611022720, type: 3}
-    - {fileID: 21300000, guid: be38a55a0f24b59459c8eaf73996a7eb, type: 3}
-    - {fileID: 21300000, guid: 01127a37950e3f04a82ff85cd50b0c74, type: 3}
-    - {fileID: 21300000, guid: 8427102b7826fe041aeb32c1eb66f12c, type: 3}
-    - {fileID: 21300000, guid: 7f42ef25377001a43a31b884b4ec69a5, type: 3}
-    - {fileID: 21300000, guid: 4818b0b281aecdb40aa9c5c9189a0c68, type: 3}
-    - {fileID: 21300000, guid: 81e1ba288c12a8c47b897752f66e6044, type: 3}
-    - {fileID: 21300000, guid: 5f647cbca37ccda498e2a0aa4194646d, type: 3}
-    - {fileID: 21300000, guid: 9578ef6b11981f440b73ba8d35a11023, type: 3}
-    - {fileID: 21300000, guid: db811a52ea556ac4286af861a89ce019, type: 3}
-    - {fileID: 21300000, guid: 02bebbd91e6dae14587ec134537f9ce2, type: 3}
-    - {fileID: 21300000, guid: 0252ab87a5216e8449de3fb4edd5fa15, type: 3}
-    - {fileID: 21300000, guid: 33312d7f83ec645489bf523352dd00b9, type: 3}
-    - {fileID: 21300000, guid: 514699024fb65a6449f1592d2c4af07a, type: 3}
-    - {fileID: 21300000, guid: 613c450299cea3245a25af1aabb90030, type: 3}
-    - {fileID: 21300000, guid: ddbec8b1cb20bd24ba52c6aaf6461a46, type: 3}
-    - {fileID: 21300000, guid: 52a4fd8529a4b8242a25a5401b485606, type: 3}
-    - {fileID: 21300000, guid: 5310ed89ef8003248a4cc219f5daeeb3, type: 3}
-    - {fileID: 21300000, guid: 4abac0683f2b0f6438029605f82401f4, type: 3}
-    - {fileID: 21300000, guid: e3e7204dba9173041b357deeed8b356b, type: 3}
-    - {fileID: 21300000, guid: 04197714cb12cfc4f89a4004b4c47743, type: 3}
-    - {fileID: 21300000, guid: 505aaf4f36196034da1eff1f70a8c7f3, type: 3}
-    - {fileID: 21300000, guid: b6ccf2245246a1f42ad36778d50abecc, type: 3}
-    - {fileID: 21300000, guid: 1055fc5767b19144a8bc9d8a7542aaf9, type: 3}
-    - {fileID: 21300000, guid: f4f530fdf38f021439c24d5091280986, type: 3}
-    - {fileID: 21300000, guid: f07ffdeda35451f4289283743b1f213c, type: 3}
-    - {fileID: 21300000, guid: 2e6f2133006507544b1c0b0c3b201c08, type: 3}
-    - {fileID: 21300000, guid: 9cef16125f5a9d84db874e19e3fef9f6, type: 3}
-    - {fileID: 21300000, guid: 78316bc75bfa43846b216dfdbc21cf75, type: 3}
-    - {fileID: 21300000, guid: 30489d4ceec7cd24bbbbcb76b1dd1ea5, type: 3}
-    - {fileID: 21300000, guid: 9e00950ca2c39bc4aa1e254c817c5766, type: 3}
+    Path: /Sprites/Animation/sun.gif
+    AnimSpeed: 1
+    GifScale: {x: 0.6, y: 0.7}
     AudioClip: {fileID: 8300000, guid: d1d9532d3463123498b4b02b646d0639, type: 3}
+    PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: 08b8888c45dca4440b8907d211e42335, type: 3}
+    OffSkinScale: {x: 1.8, y: 2}
   - Mode: 2
-    Animation:
-    - {fileID: 21300000, guid: 91859d97bae9a164c88458c46c2d93ba, type: 3}
-    - {fileID: 21300000, guid: 9238dfa44dd263745865d776b1dfced3, type: 3}
-    - {fileID: 21300000, guid: aa66478a85f93d24d80f39ff6460a5ad, type: 3}
-    - {fileID: 21300000, guid: 832bb8bdaf896bf44b70c251cadefb44, type: 3}
-    - {fileID: 21300000, guid: 4877cf382cc227f448c66c70eec70765, type: 3}
-    - {fileID: 21300000, guid: 6058888c5458e5044b78a93238d157a1, type: 3}
-    - {fileID: 21300000, guid: 91b215c2543dff14ab9049e7cdd2bcc5, type: 3}
-    - {fileID: 21300000, guid: 3b2cc505da9c82e4881bea4b58287f4a, type: 3}
+    Path: /Sprites/Animation/sunhorror.gif
+    AnimSpeed: 1
+    GifScale: {x: 0.6, y: 0.6}
     AudioClip: {fileID: 8300000, guid: e64820a4e10c0d747ac59213d7795091, type: 3}
+    PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: 44b01bf409ef20947ad832aa14197004, type: 3}
-  AnimFrameTime: 0.08333334
+    OffSkinScale: {x: 0.6, y: 0.6}
   PauseType: 0
-  PauseDuration: 0
   ChangeToMode: 0

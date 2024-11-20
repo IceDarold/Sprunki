@@ -18,15 +18,16 @@ MonoBehaviour:
     AnimSpeed: 1
     GifScale: {x: 1, y: 1}
     AudioClip: {fileID: 8300000, guid: 2467e4ede10dacf4fae958f871356cdc, type: 3}
+    PauseDuration: 6.3
     OffSkin: {fileID: 21300000, guid: 330a91c672deb344ab4eafd63410a487, type: 3}
-    OffSkinScale: {x: 1, y: 1}
+    OffSkinScale: {x: 1.9, y: 1.9}
   - Mode: 2
-    Path: 
+    Path: /Sprites/Animation/limehorror.gif
     AnimSpeed: 1
     GifScale: {x: 1, y: 1}
     AudioClip: {fileID: 8300000, guid: cad9e9f120126ce459ff0aa39556e0d1, type: 3}
+    PauseDuration: 17
     OffSkin: {fileID: 21300000, guid: 5c37470c20ed6b44d9a380108e443f65, type: 3}
-    OffSkinScale: {x: 0, y: 0}
+    OffSkinScale: {x: 1.9, y: 1.9}
   PauseType: 0
-  PauseDuration: 0
   ChangeToMode: 0

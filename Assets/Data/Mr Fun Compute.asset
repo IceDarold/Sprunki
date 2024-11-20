@@ -14,71 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModesSettings:
   - Mode: 1
-    Animation:
-    - {fileID: 21300000, guid: 1154cf8abcdfc02408558b2f4d44a793, type: 3}
-    - {fileID: 21300000, guid: 797fbd66f70cfc34fb1996d19c87eab2, type: 3}
-    - {fileID: 21300000, guid: 3b97f4080c67196489b2eaa86b3f165b, type: 3}
-    - {fileID: 21300000, guid: 72f9572705ee491488e659d500401455, type: 3}
-    - {fileID: 21300000, guid: 338f61272c10a574ea7244d57c5f775d, type: 3}
-    - {fileID: 21300000, guid: c70e96a2c0d062a4fab50c6ab7f9aee4, type: 3}
-    - {fileID: 21300000, guid: 615138305640c474db337d13de5beed6, type: 3}
-    - {fileID: 21300000, guid: 3114b911a9248c4409bb2e10915d4bca, type: 3}
-    - {fileID: 21300000, guid: 63ed01bf09b6b96478f0b7cca30dc850, type: 3}
-    - {fileID: 21300000, guid: f83ae0096ac6b9c44b8df317a57e2113, type: 3}
-    - {fileID: 21300000, guid: f1e9a8e094d3d254da490f7b538349a1, type: 3}
-    - {fileID: 21300000, guid: c95555a1ac93e8a47aac189884ff7b17, type: 3}
-    - {fileID: 21300000, guid: 65c614268cc21b942882b7edde1bbd68, type: 3}
-    - {fileID: 21300000, guid: ff0b5a8d350354f4cac9ee4b27c8cfaf, type: 3}
-    - {fileID: 21300000, guid: 7bfe0f7834953c6469e99d5e1a7d7b22, type: 3}
-    - {fileID: 21300000, guid: fe3e2256232f25f429586d249196dd37, type: 3}
-    - {fileID: 21300000, guid: b5a4fffa32149044d9778fd71ce291d4, type: 3}
-    - {fileID: 21300000, guid: e4c47c7ebe5202141a9fd4ae936c0b1f, type: 3}
-    - {fileID: 21300000, guid: 396dc0f4d87ed484990e2bbfd35c67e1, type: 3}
-    - {fileID: 21300000, guid: a8aa0392107f8374d8fe6245d023d8b7, type: 3}
-    - {fileID: 21300000, guid: 2f2015eeffeb02c4dacc2c33741cb466, type: 3}
-    - {fileID: 21300000, guid: 0bf1cb0a8e8071744ae0a1a33720e7d1, type: 3}
-    - {fileID: 21300000, guid: ef68ade246e95e242a9eb194f6e3e9d4, type: 3}
-    - {fileID: 21300000, guid: fa68388dde4985e4ea3a7b87a4f0a70d, type: 3}
-    - {fileID: 21300000, guid: 06a51056fea3e4a4f9bc98a66fcb6094, type: 3}
-    - {fileID: 21300000, guid: 0154c120703e31543b968cf2c59345c3, type: 3}
+    Path: /Sprites/Animation/fun computer.gif
+    AnimSpeed: 1
+    GifScale: {x: 0.8, y: 0.8}
     AudioClip: {fileID: 8300000, guid: 5fec2130812a6584199067d4c454861c, type: 3}
+    PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: a8c79dc03de63aa418ac9a19305c5c7d, type: 3}
+    OffSkinScale: {x: 0.8, y: 0.8}
   - Mode: 2
-    Animation:
-    - {fileID: 21300000, guid: a8dfb17b27b174342ac6d2e81ebaf907, type: 3}
-    - {fileID: 21300000, guid: 50b962a7b9cbed046a79873fa37dbbda, type: 3}
-    - {fileID: 21300000, guid: 7568520831c398a4badb9b51dd502800, type: 3}
-    - {fileID: 21300000, guid: 2afe93b911f3f3340a1a674fbcd55ba1, type: 3}
-    - {fileID: 21300000, guid: fee063e744d1a5940a6f8c037f12c182, type: 3}
-    - {fileID: 21300000, guid: a1d5d7c04e433f34cb859177cdedcf60, type: 3}
-    - {fileID: 21300000, guid: f760372891ef7594d8131d6511c49ffa, type: 3}
-    - {fileID: 21300000, guid: 929633b637b1c164091955faad9589df, type: 3}
-    - {fileID: 21300000, guid: 670f29e19cc06ae409e67990c82c76ae, type: 3}
-    - {fileID: 21300000, guid: 5ccd2c8336dd1534a934219bd7d80f88, type: 3}
-    - {fileID: 21300000, guid: 06268856dd59eca47a3da6de00b04c47, type: 3}
-    - {fileID: 21300000, guid: 940fe1f44e66d114ab41c9ed1d2ec8d3, type: 3}
-    - {fileID: 21300000, guid: 2e419f2f9b5c09d489e9087b818a92fa, type: 3}
-    - {fileID: 21300000, guid: d4877acea63f4a24ca52eb9a73ae711a, type: 3}
-    - {fileID: 21300000, guid: d06ef7fed37d046459d80b2287c5bf7f, type: 3}
-    - {fileID: 21300000, guid: b1554494b62ceb3489b43bed78cb75f0, type: 3}
-    - {fileID: 21300000, guid: d90bb68a64449b9419c22fba85f76f38, type: 3}
-    - {fileID: 21300000, guid: d0bcf728fc8bed844abea6ba706d3a3b, type: 3}
-    - {fileID: 21300000, guid: 3b518e8e65556034f89c7f7aeba18f3f, type: 3}
-    - {fileID: 21300000, guid: d3176d6a049e63d4db2660f56bf13b43, type: 3}
-    - {fileID: 21300000, guid: 41a27749cd0e7f84fab18da0d8a5cdd3, type: 3}
-    - {fileID: 21300000, guid: 995c87a17f6043043b6952ca9ce60e89, type: 3}
-    - {fileID: 21300000, guid: 6eb53a47e52fa0b4d906c1d17833ebdc, type: 3}
-    - {fileID: 21300000, guid: cec2bb38ae1cdf944a1abfecabe75856, type: 3}
-    - {fileID: 21300000, guid: 8b59c8e5c53572a459b680a2822f0534, type: 3}
-    - {fileID: 21300000, guid: fd8ac2f0e9e753d42a4cefd8ea4c2389, type: 3}
-    - {fileID: 21300000, guid: abf1498314911624aa36b1844ba97d27, type: 3}
-    - {fileID: 21300000, guid: 816a5082b0b4ab2409b3e2443a20a6e0, type: 3}
-    - {fileID: 21300000, guid: e658fbd540131d6408ba717c2930ee7a, type: 3}
-    - {fileID: 21300000, guid: a05ec0c5c0a3ade4fb3f0924db0b6747, type: 3}
-    - {fileID: 21300000, guid: f1925825186b17a47ac20f3820606d2f, type: 3}
+    Path: /Sprites/Animation/computerhorror.gif
+    AnimSpeed: 1
+    GifScale: {x: 0.8, y: 0.8}
     AudioClip: {fileID: 8300000, guid: 36b38c8558ade8c4182715975be0edf0, type: 3}
+    PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: 35250193231afc64ab0afcd11e5ff413, type: 3}
-  AnimFrameTime: 0.08333334
+    OffSkinScale: {x: 0.8, y: 0.8}
   PauseType: 0
-  PauseDuration: 0
   ChangeToMode: 0

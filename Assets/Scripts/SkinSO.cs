@@ -9,7 +9,6 @@ public class SkinSO : ScriptableObject
 {
     [SerializeField] private List<Data> ModesSettings;
     public PauseType PauseType;
-    public float PauseDuration;
     public ModeType ChangeToMode;
 
 
@@ -27,8 +26,10 @@ public class Data
     public float AnimSpeed;
     public Vector2 GifScale = new Vector2 (1,1);
     public AudioClip AudioClip;
+    public float PauseDuration;
     public Sprite OffSkin;
     public Vector2 OffSkinScale = new Vector2(1,1);
+    public Vector3 Offset;
 }
 
 
