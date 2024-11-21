@@ -66,8 +66,11 @@ public class Character : MonoBehaviour
               isSkinned = true;
               obj = data;
               obj.gameObject.SetActive(false);
-            
-            if(obj.SkinSO.ChangeToMode != ModeType.None && obj.SkinSO.ChangeToMode != ModeController.Mode)
+
+            characterAppearance.AddSkin(obj.SkinSO);
+            SetupAudioSource();
+
+            if (obj.SkinSO.ChangeToMode != ModeType.None && obj.SkinSO.ChangeToMode != ModeController.Mode)
             {
                 ModeController.SetMode(obj.SkinSO.ChangeToMode);
                 return;
@@ -75,7 +78,7 @@ public class Character : MonoBehaviour
             
 
             
-            characterAppearance.AddSkin(obj.SkinSO, SetupAudioSource);
+            
             
         }
     }

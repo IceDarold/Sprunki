@@ -23,10 +23,9 @@ public class CharacterAppearance : MonoBehaviour
     private Vector2 cachedScale;
     private Vector3 cachedPosition;
 
-    private float GifTime;
 
     private Coroutine MainAnim;
-    private List<KeyValuePair<Sprite,float>> textures;
+    //private List<KeyValuePair<Sprite,float>> textures;
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -54,7 +53,7 @@ public class CharacterAppearance : MonoBehaviour
         }
     }
 
-    public void AddSkin(SkinSO skin, Action callback )
+    public void AddSkin(SkinSO skin)
     {
         if(skin == null)
         {
@@ -65,38 +64,32 @@ public class CharacterAppearance : MonoBehaviour
         skinData = skin;
         
         currentTime = 0f;
+        
         cachedScale = transform.localScale;
+        Debug.Log(cachedScale);
         cachedPosition = transform.position;
 
 
-        
+
 
         //spriteRenderer.sprite = skinData.GetData().Animation[currentFrame];
 
-        string gifPath = Application.dataPath + skin.GetData().Path;
-        byte[] data = File.ReadAllBytes(gifPath);
-        StartCoroutine(UniGif.GetTextureListCoroutine(data, (list, loopCount, width, height) =>
-        {
-            textures = new List<KeyValuePair<Sprite,float>>();
-            foreach (var item in list)
-            {
-                var sprite = Sprite.Create(item.m_texture2d, new Rect(0, 0, item.m_texture2d.width, item.m_texture2d.height),
-                new Vector2(0.5f, 0.5f),100,1,SpriteMeshType.Tight);
-
-                
-                textures.Add(new KeyValuePair<Sprite, float>(sprite,item.m_delaySec));
-                GifTime += item.m_delaySec;
-                
-            }
-
-            GifTime += skinData.GetData().PauseDuration;
-
-            callback?.Invoke();
-            transform.position += skinData.GetData().Offset;
-            MainAnim = StartCoroutine(MainAnimation());
-        }));
-
         
+
+        transform.position += skinData.GetData().Offset;
+        if(skinData.GetData().Animation != null) 
+        {
+            MainAnim = StartCoroutine(MainAnimation());
+        }
+        else
+        {
+            spriteRenderer.sprite = skinData.GetData().DefaultSprite;
+            transform.localScale = skinData.GetData().GifScale * cachedScale;
+            currentFrame = 0;
+        }
+        
+
+
     }
 
     public void RemoveSkin()
@@ -118,7 +111,11 @@ public class CharacterAppearance : MonoBehaviour
     {
         if(isMute)
         {
-            StopCoroutine(MainAnim);
+            if(MainAnim != null)
+            {
+                StopCoroutine(MainAnim);
+            }
+            
             spriteRenderer.sprite = skinData.GetData().OffSkin;
 
             currentFrame = -1;
@@ -132,14 +129,22 @@ public class CharacterAppearance : MonoBehaviour
             currentFrame = 0;
             Debug.Log("UnMute");
             //spriteRenderer.sprite = skinData.GetData().Animation[currentFrame];
-            MainAnim = StartCoroutine(MainAnimation());
+            if (skinData.GetData().Animation != null)
+            {
+                MainAnim = StartCoroutine(MainAnimation());
+            }
+            else
+            {
+                spriteRenderer.sprite = skinData.GetData().DefaultSprite;
+            }
+            
         }
     }
 
 
     private IEnumerator MainAnimation()
     {
-        float delta = MusicSyncController.Time % GifTime;
+        float delta = MusicSyncController.Time % skinData.GetData().GifTime;
         if(delta != 0)
         {
             Debug.Log(delta);
@@ -156,7 +161,7 @@ public class CharacterAppearance : MonoBehaviour
 
 
             bool flag = false;
-            foreach (var item in textures)
+            foreach (var item in skinData.GetData().Animation)
             {
                 
                 float a = 0f;
@@ -184,6 +189,7 @@ public class CharacterAppearance : MonoBehaviour
 
             if (!flag)
             {
+                var textures = skinData.GetData().Animation;
                 spriteRenderer.sprite = textures[textures.Count - 1].Key;
                 transform.localScale = skinData.GetData().GifScale * cachedScale;
             }
@@ -213,7 +219,7 @@ public class CharacterAppearance : MonoBehaviour
 
         spriteRenderer.sprite = DefaultSprite;
         transform.localScale = cachedScale;
-        
+        Debug.Log(cachedScale);
 
         while(Vector3.Distance(transform.position, startPos) > 0.01f)
         {
