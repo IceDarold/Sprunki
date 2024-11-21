@@ -14,7 +14,7 @@ namespace Assets.Scripts
         private Vector3 startPos;
         private Image image;
 
-        private void Awake()
+        private void Start()
         {
             image = GetComponent<Image>();
 
@@ -40,6 +40,8 @@ namespace Assets.Scripts
 
         public void OnPointerDown(PointerEventData eventData)
         {
+            if (GifDataLoader.Loaded > 0) return;
+
             startPos = transform.position;
             DragAndDropController.AddObject(this);
         }
