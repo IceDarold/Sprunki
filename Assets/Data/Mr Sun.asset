@@ -14,20 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModesSettings:
   - Mode: 1
-    Path: /Sprites/Animation/sun.gif
+    Path: /Resources/Animation/sun.gif
+    DefaultSprite: {fileID: 0}
     AnimSpeed: 1
     GifScale: {x: 0.6, y: 0.7}
     AudioClip: {fileID: 8300000, guid: d1d9532d3463123498b4b02b646d0639, type: 3}
     PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: 08b8888c45dca4440b8907d211e42335, type: 3}
     OffSkinScale: {x: 1.8, y: 2}
+    Offset: {x: 0, y: 0, z: 0}
   - Mode: 2
-    Path: /Sprites/Animation/sunhorror.gif
+    Path: /Resources/Animation/sunhorror.gif
+    DefaultSprite: {fileID: 0}
     AnimSpeed: 1
     GifScale: {x: 0.6, y: 0.6}
     AudioClip: {fileID: 8300000, guid: e64820a4e10c0d747ac59213d7795091, type: 3}
     PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: 44b01bf409ef20947ad832aa14197004, type: 3}
     OffSkinScale: {x: 0.6, y: 0.6}
+    Offset: {x: 0, y: 0, z: 0}
   PauseType: 0
   ChangeToMode: 0

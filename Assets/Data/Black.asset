@@ -20,18 +20,18 @@ MonoBehaviour:
     GifScale: {x: 1.5, y: 1.5}
     AudioClip: {fileID: 8300000, guid: d955ab437c1b16542bea99d12c818266, type: 3}
     PauseDuration: 0
-    OffSkin: {fileID: 0}
-    OffSkinScale: {x: 1, y: 1}
+    OffSkin: {fileID: 21300000, guid: aed16a29adbf64340a049dbeb1051c36, type: 3}
+    OffSkinScale: {x: 1.5, y: 1.5}
     Offset: {x: 0, y: 0, z: 0}
   - Mode: 2
     Path: 
     DefaultSprite: {fileID: 21300000, guid: aed16a29adbf64340a049dbeb1051c36, type: 3}
     AnimSpeed: 1
-    GifScale: {x: 1.78, y: 1}
+    GifScale: {x: 1.5, y: 1.5}
     AudioClip: {fileID: 8300000, guid: d955ab437c1b16542bea99d12c818266, type: 3}
     PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: aed16a29adbf64340a049dbeb1051c36, type: 3}
-    OffSkinScale: {x: 1, y: 1}
+    OffSkinScale: {x: 1.5, y: 1.5}
     Offset: {x: 0, y: 0, z: 0}
   PauseType: 0
-  ChangeToMode: 0
+  ChangeToMode: 2

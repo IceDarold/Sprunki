@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModesSettings:
   - Mode: 1
-    Path: /Sprites/Animation/red.gif
+    Path: /Resources/Animation/red.gif
+    DefaultSprite: {fileID: 0}
     AnimSpeed: 1
     GifScale: {x: 0.6, y: 0.6}
     AudioClip: {fileID: 8300000, guid: 85d2880b6b3aea54383231d1ea74abfa, type: 3}
@@ -23,7 +24,8 @@ MonoBehaviour:
     OffSkinScale: {x: 0.6, y: 0.6}
     Offset: {x: 0, y: 0, z: 0}
   - Mode: 2
-    Path: /Sprites/Animation/redhorror.gif
+    Path: /Resources/Animation/redhorror.gif
+    DefaultSprite: {fileID: 0}
     AnimSpeed: 1
     GifScale: {x: 0.6, y: 0.6}
     AudioClip: {fileID: 8300000, guid: 6ce19c586448a1c44a59989eb12bbfc0, type: 3}

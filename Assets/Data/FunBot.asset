@@ -14,20 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModesSettings:
   - Mode: 1
-    Path: /Sprites/Animation/fun bot.gif
+    Path: /Resources/Animation/fun bot.gif
+    DefaultSprite: {fileID: 0}
     AnimSpeed: 1
     GifScale: {x: 0.9, y: 0.9}
     AudioClip: {fileID: 8300000, guid: a4e82bbbb6aba784a994ae40d9047172, type: 3}
     PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: 3a130fdc52be22943be601a686642d77, type: 3}
     OffSkinScale: {x: 0.9, y: 0.9}
+    Offset: {x: 0, y: 0, z: 0}
   - Mode: 2
-    Path: /Sprites/Animation/fun bot horror.gif
+    Path: /Resources/Animation/fun bot horror.gif
+    DefaultSprite: {fileID: 0}
     AnimSpeed: 1
     GifScale: {x: 0.9, y: 0.9}
     AudioClip: {fileID: 8300000, guid: cdbaf30ddcbc3f441b58624819a5dfa8, type: 3}
     PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: b9b75850a62c2464a9f81cee7b8dc71b, type: 3}
     OffSkinScale: {x: 0.9, y: 0.9}
+    Offset: {x: 0, y: 0, z: 0}
   PauseType: 0
   ChangeToMode: 0

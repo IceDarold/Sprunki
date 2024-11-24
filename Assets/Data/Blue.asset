@@ -14,19 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModesSettings:
   - Mode: 1
-    Path: /Sprites/Animation/JevinSing.gif
+    Path: /Resources/Animation/JevinSing.gif
+    DefaultSprite: {fileID: 0}
     AnimSpeed: 1
     GifScale: {x: 0.84, y: 0.73}
     AudioClip: {fileID: 8300000, guid: db2acbb7dee5ef94e9960bd615f1b68d, type: 3}
+    PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: f379331101be1c94aa5341009ac974a0, type: 3}
     OffSkinScale: {x: 0.94, y: 0.8}
+    Offset: {x: 0, y: 0, z: 0}
   - Mode: 2
-    Path: /Sprites/Animation/JevinHorrorSingReal.gif
+    Path: /Resources/Animation/JevinHorrorSingReal.gif
+    DefaultSprite: {fileID: 0}
     AnimSpeed: 1
     GifScale: {x: 0.84, y: 0.73}
     AudioClip: {fileID: 8300000, guid: 86b85e5bd1cd43b4e872aeb2d903096f, type: 3}
+    PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: 52ae37766d86df94880e374315bce363, type: 3}
     OffSkinScale: {x: 1.7, y: 1.5}
+    Offset: {x: 0, y: 0, z: 0}
   PauseType: 0
-  PauseDuration: 0
   ChangeToMode: 0

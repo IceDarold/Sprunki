@@ -14,20 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModesSettings:
   - Mode: 1
-    Path: /Sprites/Animation/green.gif
+    Path: /Resources/Animation/green.gif
+    DefaultSprite: {fileID: 0}
     AnimSpeed: 1
     GifScale: {x: 0.95, y: 0.95}
     AudioClip: {fileID: 8300000, guid: 37ac51b0ae72efb47a71e396c1746770, type: 3}
     PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: ccd363cb0f18f724fa9bc146fb150cd2, type: 3}
     OffSkinScale: {x: 0.6, y: 0.6}
+    Offset: {x: 0, y: 0, z: 0}
   - Mode: 2
-    Path: /Sprites/Animation/greenhorror.gif
+    Path: /Resources/Animation/greenhorror.gif
+    DefaultSprite: {fileID: 0}
     AnimSpeed: 1
     GifScale: {x: 0.95, y: 0.95}
     AudioClip: {fileID: 8300000, guid: 6a70f9c0d160cb34b8be962b89b6de79, type: 3}
     PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: 50571510769fe5641b4f74d86501df3e, type: 3}
     OffSkinScale: {x: 1.2, y: 1.2}
+    Offset: {x: 0, y: 0, z: 0}
   PauseType: 1
   ChangeToMode: 0

@@ -14,20 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModesSettings:
   - Mode: 1
-    Path: /Sprites/Animation/fun computer.gif
+    Path: /Resources/Animation/fun computer.gif
+    DefaultSprite: {fileID: 0}
     AnimSpeed: 1
     GifScale: {x: 0.8, y: 0.8}
     AudioClip: {fileID: 8300000, guid: 5fec2130812a6584199067d4c454861c, type: 3}
     PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: a8c79dc03de63aa418ac9a19305c5c7d, type: 3}
     OffSkinScale: {x: 0.8, y: 0.8}
+    Offset: {x: 0, y: 0, z: 0}
   - Mode: 2
-    Path: /Sprites/Animation/computerhorror.gif
+    Path: /Resources/Animation/computerhorror.gif
+    DefaultSprite: {fileID: 0}
     AnimSpeed: 1
     GifScale: {x: 0.8, y: 0.8}
     AudioClip: {fileID: 8300000, guid: 36b38c8558ade8c4182715975be0edf0, type: 3}
     PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: 35250193231afc64ab0afcd11e5ff413, type: 3}
     OffSkinScale: {x: 0.8, y: 0.8}
+    Offset: {x: 0, y: 0, z: 0}
   PauseType: 0
   ChangeToMode: 0

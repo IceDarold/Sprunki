@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModesSettings:
   - Mode: 1
-    Path: /Sprites/Animation/tree.gif
+    Path: /Resources/Animation/tree.gif
     DefaultSprite: {fileID: 0}
     AnimSpeed: 1
     GifScale: {x: 1, y: 1}

@@ -14,19 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModesSettings:
   - Mode: 1
-    Path: /Sprites/Animation/BrudAnim.gif
+    Path: /Resources/Animation/BrudAnim.gif
+    DefaultSprite: {fileID: 0}
     AnimSpeed: 1
     GifScale: {x: 0.6, y: 0.6}
     AudioClip: {fileID: 8300000, guid: 82ef864246a07364db13928656c3ebce, type: 3}
+    PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: c3cad3ec5536a4445b78bc3ba742a28b, type: 3}
     OffSkinScale: {x: 0.6, y: 0.6}
+    Offset: {x: 0, y: 0, z: 0}
   - Mode: 2
-    Path: /Sprites/Animation/BrudAAAAnim.gif
+    Path: /Resources/Animation/BrudAAAAnim.gif
+    DefaultSprite: {fileID: 0}
     AnimSpeed: 1
     GifScale: {x: 0.6, y: 0.6}
     AudioClip: {fileID: 8300000, guid: 8133550e618766c4f8ada5624bc260f8, type: 3}
+    PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: f276575877c49634386eac40d28cc202, type: 3}
     OffSkinScale: {x: 1.8, y: 1.8}
+    Offset: {x: 0, y: 0, z: 0}
   PauseType: 0
-  PauseDuration: 0
   ChangeToMode: 0

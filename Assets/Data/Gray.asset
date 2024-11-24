@@ -14,20 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModesSettings:
   - Mode: 1
-    Path: /Sprites/Animation/ezgif.com-webp-to-gif-converter.gif
+    Path: /Resources/Animation/ezgif.com-webp-to-gif-converter.gif
+    DefaultSprite: {fileID: 0}
     AnimSpeed: 1
     GifScale: {x: 0.9, y: 0.9}
     AudioClip: {fileID: 8300000, guid: e97f612d9dd38d74ba154890dc397ba6, type: 3}
     PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: c42fbd4d8d3409849a1cecbd063ade32, type: 3}
     OffSkinScale: {x: 1.82, y: 1.82}
+    Offset: {x: 0, y: 0, z: 0}
   - Mode: 2
-    Path: /Sprites/Animation/grayhorror.gif
+    Path: /Resources/Animation/grayhorror.gif
+    DefaultSprite: {fileID: 0}
     AnimSpeed: 1
     GifScale: {x: 0.9, y: 0.9}
     AudioClip: {fileID: 8300000, guid: 791928e141868f0479d97dbe04f586fb, type: 3}
     PauseDuration: 0
     OffSkin: {fileID: 21300000, guid: f6ee9f84f6cccb64e910f43e4e34be8f, type: 3}
     OffSkinScale: {x: 1.84, y: 1.84}
+    Offset: {x: 0, y: 0, z: 0}
   PauseType: 0
   ChangeToMode: 0

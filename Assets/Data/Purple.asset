@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModesSettings:
   - Mode: 1
-    Path: /Sprites/Animation/purple.gif
+    Path: /Resources/Animation/purple.gif
+    DefaultSprite: {fileID: 0}
     AnimSpeed: 1
     GifScale: {x: 0.95, y: 0.95}
     AudioClip: {fileID: 8300000, guid: a0087e3197b7f1145b1af88f26e97a61, type: 3}
@@ -23,7 +24,8 @@ MonoBehaviour:
     OffSkinScale: {x: 0.95, y: 0.95}
     Offset: {x: 0, y: 0, z: 0}
   - Mode: 2
-    Path: /Sprites/Animation/purplehorror.gif
+    Path: /Resources/Animation/purplehorror.gif
+    DefaultSprite: {fileID: 0}
     AnimSpeed: 1
     GifScale: {x: 1, y: 1}
     AudioClip: {fileID: 8300000, guid: aa6c065b5638c184a801e8b969e4006c, type: 3}

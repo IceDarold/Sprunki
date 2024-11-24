@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModesSettings:
   - Mode: 1
-    Path: /Sprites/Animation/white.gif
+    Path: /Resources/Animation/white.gif
+    DefaultSprite: {fileID: 0}
     AnimSpeed: 1
     GifScale: {x: 1, y: 1}
     AudioClip: {fileID: 8300000, guid: 58638732f92cb0d49adc1ec0677e04f4, type: 3}
@@ -23,7 +24,8 @@ MonoBehaviour:
     OffSkinScale: {x: 1, y: 1}
     Offset: {x: 0, y: 0, z: 0}
   - Mode: 2
-    Path: /Sprites/Animation/whitehorror.gif
+    Path: /Resources/Animation/whitehorror.gif
+    DefaultSprite: {fileID: 0}
     AnimSpeed: 1
     GifScale: {x: 0.95, y: 0.95}
     AudioClip: {fileID: 8300000, guid: 55da630ff092028419c3a33bebff7a4c, type: 3}

@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModesSettings:
   - Mode: 1
-    Path: /Sprites/Animation/silver.gif
+    Path: /Resources/Animation/silver.gif
+    DefaultSprite: {fileID: 0}
     AnimSpeed: 1
     GifScale: {x: 0.95, y: 0.95}
     AudioClip: {fileID: 8300000, guid: aaf2f68470d900d4dad4cd4c676f938a, type: 3}
@@ -23,7 +24,8 @@ MonoBehaviour:
     OffSkinScale: {x: 0.95, y: 0.95}
     Offset: {x: 0, y: 0, z: 0}
   - Mode: 2
-    Path: /Sprites/Animation/silverhorror.gif
+    Path: /Resources/Animation/silverhorror.gif
+    DefaultSprite: {fileID: 0}
     AnimSpeed: 1
     GifScale: {x: 1, y: 1}
     AudioClip: {fileID: 8300000, guid: 222ef32933ac7644392493596c973a36, type: 3}
