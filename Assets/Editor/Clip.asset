@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 585672f2c9f907744aab0e927af91c2a, type: 3}
-  m_Name: GIF Animation Clip
+  m_Name: Clip
   m_EditorClassIdentifier: 
   Animation: []

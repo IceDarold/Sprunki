@@ -5,6 +5,8 @@ using UnityEngine;
 using Unity.EditorCoroutines;
 using Unity.EditorCoroutines.Editor;
 using UnityEngine.UIElements;
+using System;
+using System.IO;
 
 [CustomEditor(typeof(GIFAnimationClip))]
 public class GIFEditor : Editor
@@ -15,13 +17,13 @@ public class GIFEditor : Editor
     private SpriteRenderer previewRenderer;
     private Sprite previewSprite;
 
+    private GIFAnimationClip clip;
 
     private bool isPlaying;
     private float currentTime = 0f;
 
     private float cachedTime = 0f;
-  
-    private EditorCoroutine coroutine;
+
     private float length = 0f;
 
     private void OnEnable()
@@ -33,13 +35,13 @@ public class GIFEditor : Editor
 
         previewObject = new GameObject("Preview Object");
         previewRenderer =  previewObject.AddComponent<SpriteRenderer>();
-        previewRenderer.color = Color.red;
+        previewRenderer.color = Color.white;
 
         previewRenderUtility.AddSingleGO(previewObject);
 
         currentTime = (float)EditorApplication.timeSinceStartup;
 
-        //coroutine = EditorCoroutineUtility.StartCoroutineOwnerless(UpdateCoroutine());
+        
         
     }
 
@@ -50,14 +52,14 @@ public class GIFEditor : Editor
             DestroyImmediate(previewObject);
         previewRenderUtility.Cleanup();
 
-        //EditorCoroutineUtility.StopCoroutine(coroutine);
+        
     }
 
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
 
-        GIFAnimationClip clip = target as GIFAnimationClip;
+         clip = target as GIFAnimationClip;
 
         var property = serializedObject.FindProperty("Animation");
 
@@ -66,9 +68,18 @@ public class GIFEditor : Editor
         EditorGUILayout.PropertyField(property,true);
         serializedObject.ApplyModifiedProperties();
 
+        if(GUILayout.Button("Export GIF"))
+        {
+            ExportGif();
+        }
+
         EditorGUILayout.Space(80);
 
+
+        
         length = clip.Length;
+
+
         if(length == 0)
         {
             return;
@@ -90,6 +101,7 @@ public class GIFEditor : Editor
 
 
         
+        previewRenderer.sprite = clip.GetFrame(currentTime).Sprite;
 
 
 
@@ -118,18 +130,61 @@ public class GIFEditor : Editor
 
     }
 
-
-    private IEnumerator UpdateCoroutine()
+    private void ExportGif()
     {
-        while (true)
+        string path = EditorUtility.OpenFilePanel("GIF Exporting", Application.dataPath, "gif");
+
+        if (path == "") return;
+
+        if (Path.GetExtension(path) != ".gif") return;
+        string fileName = Path.GetFileNameWithoutExtension(path); 
+        
+
+        byte[] bytes = File.ReadAllBytes(path);
+        EditorCoroutineUtility.StartCoroutineOwnerless(UniGif.GetTextureListCoroutine(bytes,(list,height,width,a)=>
         {
+            clip.Clear();
+            int count = list.Count;
+
+            float[] durations = new float[count];
+            Sprite[] sprites = new Sprite[count];
+
+            string relativePath = "/Sprites/Generated/" + fileName + "/";
+            string spriteFolder = Application.dataPath + relativePath;
+
+            if(!Directory.Exists(spriteFolder))
+            {
+                Directory.CreateDirectory(spriteFolder);
+            }
+
+            int i = 0;
+            foreach(var item in list)
+            {
+                durations[i] = item.m_delaySec;
+                byte[] pngData = item.m_texture2d.EncodeToPNG();
+                File.WriteAllBytes(spriteFolder + i.ToString() + ".png", pngData);
+                i++;
+                
+            }
+
+            AssetDatabase.Refresh();
+
+            for (int j = 0; j < count; j++)
+            {
+                /*TextureImporter textureImporter = AssetImporter.GetAtPath("Assets" + relativePath + j.ToString() + ".png") as TextureImporter;
+                if(textureImporter != null)
+                {
+                    textureImporter.textureType = TextureImporterType.Sprite;
+                    textureImporter.SaveAndReimport();
+                }*/
+                Debug.Log("Assets" + relativePath + j.ToString() + ".png");
+                Sprite newSprite = AssetDatabase.LoadAssetAtPath<Sprite>("Assets" + relativePath + j.ToString() + ".png");
+                sprites[j] = newSprite;
+                Debug.Log(newSprite);
+            }
             
-            yield return null;
-        }
-        
-        
+            clip.AddAnimation(sprites,durations);
+
+        }));
     }
-
-
-
 }
